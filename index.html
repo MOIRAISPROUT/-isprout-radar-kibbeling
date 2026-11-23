@@ -29,13 +29,12 @@ select,input[type=range]{padding:8px;border:1px solid var(--line);border-radius:
 .chip{display:inline-block;padding:2px 9px;border-radius:99px;font-size:11px;font-weight:600}
 .chip.a{background:var(--mint);color:#1c3326}.chip.b{background:#dfe7f5;color:#24406e}
 .chip.hot{background:#f7e3df;color:var(--crit)}.chip.mid{background:#f5ecd9;color:var(--warn)}.chip.low{background:#e3efe6;color:var(--ok)}
+.chip.new{background:#f7e3df;color:#b4443a}
 .chip.conf{background:#dfe7f5;color:#24406e}.chip.net{background:var(--mint);color:#1c3326}.chip.sport{background:#f5ecd9;color:#8a6d2f}.chip.eigen{background:#f7e3df;color:#b4443a}
 .lead{background:var(--card);border:1px solid var(--line);border-radius:14px;margin-bottom:10px;overflow:hidden}
 .lead-head{display:flex;align-items:center;gap:14px;padding:13px 16px;cursor:pointer}.lead-head:hover{background:#faf9f5}
 .rank{width:30px;height:30px;border-radius:8px;background:var(--accent);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:13px;flex-shrink:0}
 .lead-head .name{font-weight:600;flex:1}.lead-head .meta{font-size:12px;color:var(--mut)}
-.scorebar{width:100px;height:8px;background:var(--line);border-radius:99px;overflow:hidden}
-.scorebar i{display:block;height:100%;background:var(--accent)}.scorebar i.b{background:#4a6ea8}
 .lead-body{display:none;padding:0 16px 16px;border-top:1px dashed var(--line)}
 .lead.open .lead-body{display:block}
 .opt{border:1px solid var(--line);border-radius:10px;padding:10px 14px;margin:10px 0;font-size:13px}
@@ -45,8 +44,6 @@ select,input[type=range]{padding:8px;border:1px solid var(--line);border-radius:
 .outreach{background:var(--dark);color:#d8e4da;border-radius:8px;padding:12px 14px;font-size:13px;margin-top:10px;white-space:pre-wrap}
 .btn{background:var(--accent);color:#fff;border:none;padding:8px 14px;border-radius:8px;font-size:13px;cursor:pointer;font-family:inherit}
 .btn:hover{background:var(--accent-d)}
-.btn.ghost{background:#fff;color:var(--accent);border:1px solid var(--accent)}
-.btn.ghost:hover{background:var(--mint)}
 #mapwrap{display:flex;gap:16px;height:calc(100vh - 170px)}
 #map{flex:1;border-radius:14px;border:1px solid var(--line)}
 #panel{width:360px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;overflow:auto;flex-shrink:0}
@@ -71,6 +68,7 @@ form input,form select{padding:8px;border:1px solid var(--line);border-radius:8p
 form input[type=text]{width:300px}
 .del{color:var(--mut);font-size:11px;cursor:pointer;text-decoration:underline}
 .demo-note{font-size:11px;color:var(--mut);background:#f2f0e6;padding:8px 12px;border-radius:8px;margin-bottom:14px}
+.rec-note{font-size:13px;color:var(--txt);background:#e3efe6;padding:10px 14px;border-radius:8px;margin-bottom:14px;border-left:4px solid var(--accent)}
 </style>
 </head>
 <body>
@@ -92,28 +90,26 @@ const DEPT_L={audit:"Audit & Assurance",payroll:"Payroll & Administratie",tax:"B
 
 // ===== DEMODATA (fallback als leads.json ontbreekt) =====
 const DEMO=[
-{id:1,name:"H2K Penning",group:"H2K",city:"Helmond",lat:51.48,lng:5.66,size:"middelgroot",mdw:290,score_out:92,score_nl:71,dept:{audit:120,payroll:95,tax:45,advisory:30},
- sigs:[["A","Publiceert 6 payroll-outsourcing-vacatures in één maand","Accountancy Vanmorgen",5],["B","14 openstaande vacatures >90 dagen online","Werkgeverssite",4],["A","Spreekt over 'capaciteit op afstand' in interview","Podcast",3]],vac:3},
-{id:2,name:"VBK Groep",group:"VBK",city:"Vianen",lat:51.99,lng:5.10,size:"middelgroot",mdw:410,score_out:88,score_nl:64,dept:{audit:150,payroll:140,tax:70,advisory:50},
- sigs:[["A","Interim-coördinator 'outsourced accounting services' gezocht","Vacaturebank",5],["A","Overnamepoging middelgroot kantoor","Nieuws",2]],vac:1},
-{id:3,name:"Flynth Adviseurs en Accountants",group:"Flynth",city:"Zaandam",lat:52.44,lng:4.83,size:"middelgroot",mdw:340,score_out:85,score_nl:78,dept:{audit:110,payroll:130,tax:60,advisory:40},
- sigs:[["A","HR-directeur in pers: 'we komen mensen niet meer aan'","Nieuws",4],["B","Zeven vacatures, incl. relocate-vriendelijk","Vacaturebank",4]],vac:2},
-{id:4,name:"Ten Holter Nolet",group:"Onafhankelijk",city:"Oosterhout",lat:51.62,lng:4.86,size:"middelgroot",mdw:210,score_out:83,score_nl:59,dept:{audit:90,payroll:60,tax:40,advisory:20},
- sigs:[["A","Neemt drie kantoren over — werkvoorraad groeit","Nieuws",3],["A","12 audit-assistent-vacatures","Vacaturebank",3]],vac:1},
-{id:5,name:"Moïse Partners",group:"Onafhankelijk",city:"Tilburg",lat:51.58,lng:5.07,size:"klein",mdw:38,score_out:73,score_nl:52,dept:{audit:14,payroll:12,tax:8,advisory:4},
- sigs:[["A","Partner vraagt publiek om capacity-partners","LinkedIn",5]],vac:0},
-{id:6,name:"Meijburg & Co (KPMG Tax)",group:"KPMG",city:"Amstelveen",lat:52.30,lng:4.86,size:"groot",mdw:1100,score_out:76,score_nl:80,dept:{audit:400,payroll:150,tax:350,advisory:200},
- sigs:[["A","Global lead: 'smart reshoring van run-werk'","Congres",3],["B","Internationaal talentprogramma uitgebreid","Nieuws",4]],vac:0},
-{id:7,name:"BDO Nederland",group:"BDO",city:"Ede",lat:52.05,lng:5.66,size:"groot",mdw:1400,score_out:74,score_nl:75,dept:{audit:520,payroll:380,tax:280,advisory:220},
- sigs:[["A","Landelijke campagne payroll-professionals","Werkgeverssite",3]],vac:0},
-{id:8,name:"Grant Thornton",group:"Grant Thornton",city:"Amsterdam",lat:52.34,lng:4.92,size:"groot",mdw:900,score_out:64,score_nl:82,dept:{audit:350,payroll:120,tax:230,advisory:200},
- sigs:[["B","Groot internationaal instroomprogramma","Nieuws",4]],vac:0},
-{id:9,name:"Krüger Accountants & Adviseurs",group:"Onafhankelijk",city:"Enschede",lat:52.22,lng:6.89,size:"klein",mdw:60,score_out:66,score_nl:49,dept:{audit:25,payroll:20,tax:10,advisory:5},
- sigs:[["A","Parttime payroll-vacature al maanden open","Vacaturebank",3]],vac:1},
-{id:10,name:"Efficiensia",group:"Onafhankelijk",city:"Terneuzen",lat:51.33,lng:3.83,size:"klein",mdw:22,score_out:54,score_nl:44,dept:{audit:8,payroll:8,tax:4,advisory:2},
- sigs:[],vac:0},
+{id:1,name:"H2K Penning",group:"H2K",city:"Helmond",lat:51.48,lng:5.66,size:"middelgroot",mdw:290,score_out:92,score_nl:71,
+ sigs:[["A","Publiceert 6 payroll-outsourcing-vacatures in één maand","Accountancy Vanmorgen",5,""],["B","14 openstaande vacatures >90 dagen online","Werkgeverssite",4,""],["A","Spreekt over 'capaciteit op afstand' in interview","Podcast",3,""]],vac:3},
+{id:2,name:"VBK Groep",group:"VBK",city:"Vianen",lat:51.99,lng:5.10,size:"middelgroot",mdw:410,score_out:88,score_nl:64,
+ sigs:[["A","Interim-coördinator 'outsourced accounting services' gezocht","Vacaturebank",5,""],["A","Overnamepoging middelgroot kantoor","Nieuws",2,""]],vac:1},
+{id:3,name:"Flynth Adviseurs en Accountants",group:"Flynth",city:"Zaandam",lat:52.44,lng:4.83,size:"middelgroot",mdw:340,score_out:85,score_nl:78,
+ sigs:[["A","HR-directeur in pers: 'we komen mensen niet meer aan'","Nieuws",4,""],["B","Zeven vacatures, incl. relocate-vriendelijk","Vacaturebank",4,""]],vac:2},
+{id:4,name:"Ten Holter Nolet",group:"Onafhankelijk",city:"Oosterhout",lat:51.62,lng:4.86,size:"middelgroot",mdw:210,score_out:83,score_nl:59,
+ sigs:[["A","Neemt drie kantoren over — werkvoorraad groeit","Nieuws",3,""],["A","12 audit-assistent-vacatures","Vacaturebank",3,""]],vac:1},
+{id:5,name:"Moïse Partners",group:"Onafhankelijk",city:"Tilburg",lat:51.58,lng:5.07,size:"klein",mdw:38,score_out:73,score_nl:52,
+ sigs:[["A","Partner vraagt publiek om capacity-partners","LinkedIn",5,""]],vac:0},
+{id:6,name:"Meijburg & Co (KPMG Tax)",group:"KPMG",city:"Amstelveen",lat:52.30,lng:4.86,size:"groot",mdw:1100,score_out:76,score_nl:80,
+ sigs:[["A","Global lead: 'smart reshoring van run-werk'","Congres",3,""],["B","Internationaal talentprogramma uitgebreid","Nieuws",4,""]],vac:0},
+{id:7,name:"BDO Nederland",group:"BDO",city:"Ede",lat:52.05,lng:5.66,size:"groot",mdw:1400,score_out:74,score_nl:75,
+ sigs:[["A","Landelijke campagne payroll-professionals","Werkgeverssite",3,""]],vac:0},
+{id:8,name:"Grant Thornton",group:"Grant Thornton",city:"Amsterdam",lat:52.34,lng:4.92,size:"groot",mdw:900,score_out:64,score_nl:82,
+ sigs:[["B","Groot internationaal instroomprogramma","Nieuws",4,""]],vac:0},
+{id:9,name:"Krüger Accountants & Adviseurs",group:"Onafhankelijk",city:"Enschede",lat:52.22,lng:6.89,size:"klein",mdw:60,score_out:66,score_nl:49,
+ sigs:[["A","Parttime payroll-vacature al maanden open","Vacaturebank",3,""]],vac:1},
+{id:10,name:"Efficiensia",group:"Onafhankelijk",city:"Terneuzen",lat:51.33,lng:3.83,size:"klein",mdw:22,score_out:54,score_nl:44,sigs:[],vac:0},
 ];
-const LOCS={1:[{n:"Helmond (HQ)",lat:51.48,lng:5.66},{n:"Eindhoven",lat:51.44,lng:5.48}],3:[{n:"Zaandam (HQ)",lat:52.44,lng:4.83},{n:"Alkmaar",lat:52.63,lng:4.75}],7:[{n:"Ede (HQ)",lat:52.05,lng:5.66},{n:"Amsterdam",lat:52.35,lng:4.90},{n:"Rotterdam",lat:51.92,lng:4.48}]};
 const OPTS={A:{label:"Optie A · Outsourcing",hint:"Remote capacity vanuit Zuid-Afrika — payroll, administratie, audit-support.",mail:(o,t)=>`Beste [partner ${o.name}],\n\nIk zag dat ${t.toLowerCase()} — bij kantoren van jullie formaat betekent dat vaak druk op de werkvoorraad.\n\niSprout levert remote professionals vanuit Zuid-Afrika: getraind, Nederlands begeleid, zonder lange wervingstijd.\n\nZullen we volgende week 20 minuten bellen?\n\nMet vriendelijke groet,\n[Naam] — iSprout`},
 B:{label:"Optie B · Plaatsing in NL",hint:"ZA-professional die naar Nederland komt en bij jullie in dienst treedt.",mail:(o,t)=>`Beste [partner ${o.name}],\n\nIk zag dat ${t.toLowerCase()} — dit soort posities zijn in Nederland heel lastig te vervullen.\n\niSprout plaatst toptalent van Zuid-Afrikaanse universiteiten bij jullie in Nederland: vaste aanstelling, met relocatie-support.\n\nZullen we verkennen of dat voor jullie past?\n\nMet vriendelijke groet,\n[Naam] — iSprout`}};
 
@@ -128,17 +124,20 @@ fetch("leads.json").then(r=>{if(!r.ok)throw 0;return r.json()})
   SRC="live";render();})
  .catch(()=>{DATA=DEMO;render();});
 
+// ===== LIVE EVENTS uit evenementen-scanner (events.json) =====
+let LIVE_EVENTS=[];
+fetch("events.json").then(r=>r.ok?r.json():Promise.reject()).then(d=>{
+  LIVE_EVENTS=(d.events||[]).map(e=>({n:e.naam,d:"",t:"net",l:"datum check via bronlink",tag:"🆕 Gevonden door scanner ("+(e.gevonden||"")+")",url:e.link}));
+  if(cur==="ev")renderEv();
+}).catch(()=>{});
+
 let cur="radar",selected=null,map=null,markers=[],locLayer=null;
 const view=document.getElementById("view");
 document.querySelectorAll("nav button").forEach(b=>b.onclick=()=>{cur=b.dataset.view;document.querySelectorAll("nav button").forEach(x=>x.classList.remove("active"));b.classList.add("active");render();});
-const TITLES={radar:["AI Lead Radar","Twee opties per lead: A = outsourcing (remote ZA), B = plaatsing in NL. Elke kaart legt uit WAAROM hij een lead is."],map:["Kantorenkaart","Alle kantoren uit de masterlijst. Groen = A-dominant, blauw = B-dominant, grijs = nog geen signalen."],net:["Netwerkoverzicht","Eén deal bij een lid kan doorschijnen naar zusterkantoren."],ev:["Evenementen","Sectorevents met salespotentieel — met agenda-export en eigen events."]};
+const TITLES={radar:["AI Lead Radar","Twee opties per lead: A = outsourcing (remote ZA), B = plaatsing in NL. Elke kaart legt uit WAAROM hij een lead is."],map:["Kantorenkaart","Alle kantoren uit de masterlijst. Groen = A-dominant, blauw = B-dominant, grijs = nog geen signalen."],net:["Netwerkoverzicht","Eén deal bij een lid kan doorschijnen naar zusterkantoren."],ev:["Evenementen","Sectorevents met salespotentieel — live scanner-events, agenda-export en eigen events."]};
 
 function render(){const[t,s]=TITLES[cur];document.getElementById("htitle").textContent=t;document.getElementById("hsub").textContent=s+(SRC==="live"?" · LIVE data: "+DATA.length+" kantoren":" · Demodata");selected=null;
- if(cur==="radar")renderRadar();else if(cur==="map")renderMap();else if(cur==="net")renderNet();else renderEv();} // Aanbevelingen: koppel events aan je hot leads
- const hot=[...DATA].filter(o=>Math.max(o.score_out,o.score_nl)>=75).sort((a,b)=>Math.max(b.score_out,b.score_nl)-Math.max(a.score_out,a.score_nl)).slice(0,5);
- const rec=document.createElement("div");rec.className="demo-note";
- rec.innerHTML=hot.length?`<b style="color:var(--accent)">💡 Aanbevolen aanpak:</b> benader deze leads vóóraf bij het eerstvolgende netwerkevent — ${hot.map(o=>o.name).join(" · ")}. Zo kom je op het event met afspraken in plaats van met visitekaartjes.`:`Nog geen hot leads — draai een scan zodat aanbevelingen gevuld worden.`;
- document.getElementById("evLijst").before(rec);
+ if(cur==="radar")renderRadar();else if(cur==="map")renderMap();else if(cur==="net")renderNet();else renderEv();}
 
 // ===== RADAR =====
 function renderRadar(){
@@ -185,7 +184,7 @@ function renderRadar(){
 // ===== KAART =====
 function renderMap(){
  view.innerHTML=`<div class="filters"><span style="font-size:13px;color:var(--mut)">Alle ${DATA.length} kantoren uit de masterlijst. Groen = A-dominant (outsourcing), blauw = B-dominant (plaatsing NL), grijs = nog geen signalen. Klik op een pin voor details.</span></div>
- <div id="mapwrap"><div id="map"></div><div id="panel"><p style="color:var(--mut);font-size:13px">Klik op een pin om kantoorinformatie te zien: overzicht, signalen en locaties.</p></div></div>`;
+ <div id="mapwrap"><div id="map"></div><div id="panel"><p style="color:var(--mut);font-size:13px">Klik op een pin om kantoorinformatie te zien: signalen en locatie.</p></div></div>`;
  if(!map){map=L.map("map").setView([52.2,5.3],7);L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",{attribution:"© OpenStreetMap"}).addTo(map);}
  setTimeout(()=>map.invalidateSize(),50);
  markers.forEach(m=>map.removeLayer(m));markers=[];locLayer&&(map.removeLayer(locLayer),locLayer=null);
@@ -198,21 +197,12 @@ function renderMap(){
 }
 function showOffice(o){
  if(locLayer){map.removeLayer(locLayer);locLayer=null}
- const locs=LOCS[o.id]||[{n:(o.city||"onbekend")+" (HQ)",lat:o.lat,lng:o.lng}];
  const sigHTML=(o.sigs||[]).length
   ? o.sigs.slice(0,5).map(s=>`<div class="sig"><span class="chip ${s[0]==="A"?"a":"b"}">${s[0]}</span> ${s[1]}${s[4]?` <a href="${s[4]}" target="_blank" rel="noopener" style="font-size:11px">bron ↗</a>`:""}<br><small style="color:var(--mut)">Bron: ${s[2]}</small></div>`).join("")
   : "<small style='color:var(--mut)'>Nog geen signalen — dit kantoor staat op de masterlijst met basis-score.</small>";
- document.getElementById("panel").innerHTML=`<h3>${o.name}</h3><p style="font-size:12px;color:var(--mut)">${o.city||"—"} · ${o.mdw?o.mdw+" fte":"omvang onbekend"}</p>
+ document.getElementById("panel").innerHTML=`<h3>${o.name}</h3><p style="font-size:12px;color:var(--mut)">${o.city||"—"}${o.mdw?" · "+o.mdw+" fte":""}</p>
   <div style="display:flex;gap:8px;margin:8px 0;flex-wrap:wrap"><span class="chip a">A outsourcing: <b>${o.score_out}</b></span><span class="chip b">B plaatsing: <b>${o.score_nl}</b></span>${o.vac?`<span class="chip b">${o.vac} vacatures</span>`:""}</div>
-  <div class="tabs"><button class="on" data-t="ov">Signalen</button><button data-t="lc">Locatie</button></div><div id="tabBody"></div>`;
- const body=document.getElementById("tabBody"),tabs=document.querySelectorAll("#panel .tabs button");
- const tab=t=>{tabs.forEach(b=>b.classList.toggle("on",b.dataset.t===t));
-  if(t==="ov")body.innerHTML=sigHTML;
-  if(t==="lc"){body.innerHTML=locs.map((l,i)=>`<div class="dept" data-i="${i}">${l.n}</div>`).join("");
-   body.querySelectorAll(".dept").forEach(el=>el.onclick=()=>{const l=locs[+el.dataset.i];locLayer&&map.removeLayer(locLayer);
-    locLayer=L.marker([l.lat,l.lng]).bindPopup(`<b>${o.name}</b><br>${l.n}`).addTo(map);map.setView([l.lat,l.lng],11);});}
- };
- tabs.forEach(b=>b.onclick=()=>tab(b.dataset.t));tab("ov");
+  <b style="font-size:12px;display:block;margin:8px 0 4px">WAAROM EEN LEAD?</b>${sigHTML}`;
 }
 
 // ===== NETWERK =====
@@ -246,16 +236,10 @@ function ics(ev){
  const b=new Blob([`BEGIN:VCALENDAR\nVERSION:2.0\nPRODID:-//iSprout Radar//NL\nBEGIN:VEVENT\nUID:${Date.now()}@isprout\nDTSTART;VALUE=DATE:${dt}\nDTEND;VALUE=DATE:${end}\nSUMMARY:${ev.n}\nLOCATION:${ev.l}\nDESCRIPTION:iSprout Radar event — ${EVL[ev.t]}\nEND:VEVENT\nEND:VCALENDAR`],{type:"text/calendar"});
  const a=document.createElement("a");a.href=URL.createObjectURL(b);a.download=ev.n.replace(/\W+/g,"-")+".ics";a.click();
 }
-function laadEv(){return BASIS.concat(JSON.parse(localStorage.getItem("isprout_events")||"[]"))}
-// Live events uit de scanner
-let LIVE_EVENTS=[];
-fetch("events.json").then(r=>r.ok?r.json():Promise.reject()).then(d=>{
-  LIVE_EVENTS=(d.events||[]).map(e=>({n:e.naam,d:"",t:"net",l:"datum check via bron",tag:"🆕 Gevonden door scanner ("+(e.gevonden||"")+"))".replace("))",")"),url:e.link,live:true}));
-  if(cur==="ev")renderEv();
-}).catch(()=>{});
-  let evFilter="";
 function laadEv(){return LIVE_EVENTS.concat(BASIS, JSON.parse(localStorage.getItem("isprout_events")||"[]"))}
- view.innerHTML=`<div class="demo-note">⚠ Behalve het Audit Event (1-3-27) en het AV-padeltoernooi zijn datums nog TBC — check de organisator zodra 2027-datums gepubliceerd worden.</div>
+let evFilter="";
+function renderEv(){
+ view.innerHTML=`<div class="demo-note">⚠ Behalve het Audit Event (1-3-27) en het AV-padeltoernooi zijn datums nog TBC — check de organisator. Events met 🆕 zijn gevonden door de dagelijkse scanner; open de bronlink voor de exacte datum.</div>
  <div class="filters" id="evFilters">
   <button data-f="" class="filtbtn on">Alles</button>
   <button data-f="conf" class="filtbtn">Conferenties</button>
@@ -263,6 +247,7 @@ function laadEv(){return LIVE_EVENTS.concat(BASIS, JSON.parse(localStorage.getIt
   <button data-f="sport" class="filtbtn">Sport/Netwerk</button>
   <button data-f="eigen" class="filtbtn">Mijn events</button>
  </div>
+ <div id="recBox"></div>
  <div id="evLijst"></div>
  <form id="evFrm"><h2>+ Eigen event toevoegen</h2>
   <input type="text" id="eNaam" placeholder="Naam van het event">
@@ -273,17 +258,25 @@ function laadEv(){return LIVE_EVENTS.concat(BASIS, JSON.parse(localStorage.getIt
   <button class="btn" type="submit">Toevoegen</button></form>`;
  function toon(){
   const lijst=document.getElementById("evLijst");
-  const evs=laadEv().sort((a,b)=>(a.d||"9999")<(b.d||"9999")?-1:1).filter(e=>!evFilter||e.t===evFilter);
-  lijst.innerHTML=evs.map((e,i)=>{
+  const evs=laadEv().sort((a,b)=>(a.d||"9999")<(b.d||"9999")?-1:1).filter(e=>!evFilter||(evFilter==="eigen"?e.eigen:e.t===evFilter));
+  lijst.innerHTML=evs.map(e=>{
    const d=e.d?e.d.slice(8,10):"?",m=e.d?MN[+e.d.slice(5,7)-1]:"TBC";
    return `<div class="ev"><div class="datebox ${e.d?"":"tbc"}"><div class="d">${d}</div><div class="m">${m}</div></div>
-   <div><h3>${e.n}</h3><p>${e.l}</p><span class="chip ${e.t}">${EVL[e.t]}</span> <span style="font-size:11px;color:var(--mut)">${e.tag||""}</span>${e.url?`<br><a href="${e.url}" target="_blank" rel="noopener" style="font-size:11px">website ↗</a>`:""}${e.eigen?`<br><span class="del" data-i="${i}">verwijderen</span>`:""}</div>
-   <div class="act">${e.d?`<button class="btn" onclick='ics(${JSON.stringify(e).replace(/'/g,"&#39;")})'>📅 Agenda</button>`:""}</div></div>`;
+   <div><h3>${e.n}</h3><p>${e.l}</p>${e.live?'<span class="chip new">🆕 scanner</span> ':''}<span class="chip ${e.t}">${EVL[e.t]}</span> <span style="font-size:11px;color:var(--mut)">${e.tag||""}</span>${e.url?`<br><a href="${e.url}" target="_blank" rel="noopener" style="font-size:11px">bron/website ↗</a>`:""}${e.eigen?`<br><span class="del" data-n="${e.n}">verwijderen</span>`:""}</div>
+   <div class="act">${e.d?`<button class="btn" data-ev='${JSON.stringify(e).replace(/'/g,"&#39;")}'>📅 Agenda</button>`:""}</div></div>`;
   }).join("");
   lijst.querySelectorAll(".del").forEach(x=>x.onclick=()=>{
    const arr=JSON.parse(localStorage.getItem("isprout_events")||"[]");
-   arr.splice(+x.dataset.i-BASIS.length,1);localStorage.setItem("isprout_events",JSON.stringify(arr));toon();
+   const idx=arr.findIndex(a=>a.n===x.dataset.n);
+   if(idx>-1){arr.splice(idx,1);localStorage.setItem("isprout_events",JSON.stringify(arr));toon();}
   });
+  lijst.querySelectorAll("button[data-ev]").forEach(b=>b.onclick=()=>ics(JSON.parse(b.dataset.ev)));
+  // Aanbevelingen: hot leads koppelen aan eerstvolgende netwerkevent
+  const rec=document.getElementById("recBox");
+  const hot=[...DATA].filter(o=>Math.max(o.score_out,o.score_nl)>=75).sort((a,b)=>Math.max(b.score_out,b.score_nl)-Math.max(a.score_out,a.score_nl)).slice(0,5);
+  rec.innerHTML=hot.length
+   ? `<div class="rec-note"><b>💡 Aanbevolen aanpak:</b> benader deze leads vóóraf bij het eerstvolgende netwerkevent — <b>${hot.map(o=>o.name).join(" · ")}</b>. Zo kom je op het event met afspraken in plaats van met visitekaartjes.</div>`
+   : "";
  }
  document.getElementById("evFilters").querySelectorAll("button").forEach(b=>b.onclick=()=>{
   evFilter=b.dataset.f;document.querySelectorAll("#evFilters button").forEach(x=>x.classList.remove("on"));b.classList.add("on");toon();
