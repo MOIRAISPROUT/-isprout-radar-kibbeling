@@ -1,0 +1,87 @@
+# scraper.py — dagelijkse scan: nieuws + vacatures, scores voor Outsourcing (A) en NL-Plaatsing (B)
+import feedparser, json, re, datetime
+
+KANTOREN = [
+    {"name": "H2K Penning",            "city": "Helmond"},
+    {"name": "VBK Groep",              "city": "Vianen"},
+    {"name": "Flynth Adviseurs en Accountants", "city": "Zaandam"},
+    {"name": "Ten Holter Nolet",       "city": "Oosterhout"},
+    {"name": "Withaccountants",        "city": "Tilburg"},
+    {"name": "Accon AVM",              "city": "Almelo"},
+    {"name": "JA Accountants",         "city": "Groningen"},
+    {"name": "Meijburg & Co",          "city": "Amstelveen"},
+    {"name": "BDO Nederland",          "city": "Ede"},
+    {"name": "Grant Thornton",         "city": "Amsterdam"},
+    {"name": "Baker Tilly",            "city": "Nieuwegein"},
+    {"name": "Deloitte Nederland",     "city": "Amsterdam"},
+    {"name": "Hof Hoorneman",          "city": "Vught"},
+    {"name": "Draaijer & Partners",    "city": "Hoogeveen"},
+    {"name": "Krüger Accountants",     "city": "Enschede"},
+    {"name": "Swinkels Accountants",   "city": "Ede"},
+    {"name": "Van Wijgerden",          "city": "Amersfoort"},
+    {"name": "Furas Groep",            "city": "Apeldoorn"},
+    {"name": "Moïse Partners",         "city": "Tilburg"},
+    {"name": "Efficiensia",            "city": "Terneuzen"},
+]
+
+# Keyword-sets per optie — [zoekterm, gewicht 1-5]
+OUT_KEYWORDS = [  # drivers voor outsourcing (remote capacity)
+    ("outsourcen", 5), ("uitbesteden", 5), ("backoffice", 4), ("werkvoorraad", 4),
+    ("werkpressure", 4), ("capacity", 4), ("remote", 3), ("op afstand", 3),
+    ("payroll outsourcen", 5), ("toelevering", 3), ("capacity partner", 5),
+]
+NL_KEYWORDS = [   # drivers voor plaatsing van ZA-professional in Nederland
+    ("vacature", 3), ("in dienst treden", 3), ("relocation", 4), ("expat", 4),
+    ("internationale professional", 4), ("vuik contract", 3), ("tijdelijk contract", 3),
+    ("fulltime aanstelling", 3), ("senior accountant gezocht", 4), ("instroom", 2),
+]
+
+def score_text(text, keywords):
+    t = text.lower()
+    hits = []
+    for kw, w in keywords:
+        if kw in t:
+            hits.append({"keyword": kw, "gewicht": w})
+    return hits
+
+def scan(query, keywords, bron):
+    """Zoek Google News naar 'query'; genereer signalen waar keywords vallen."""
+    feed = feedparser.parse(
+        f"https://news.google.com/rss/search?q={query.replace(' ', '+')}&hl=nl&gl=NL&ceid=NL:nl"
+    )
+    out = []
+    for e in feed.entries[:10]:
+        text = e.title + " " + getattr(e, "summary", "")
+        hits = score_text(text, keywords)
+        if hits:
+            out.append({
+                "type": "A" if keywords is OUT_KEYWORDS else "B",
+                "titel": e.title[:140],
+                "link": e.link,
+                "bron": bron,
+                "gewicht": sum(h["gewicht"] for h in hits),
+                "datum": getattr(e, "published", ""),
+            })
+    return out
+
+leads = []
+for k in KANTOREN:
+    sig_a = scan(f'{k["name"]} accountants nieuws', OUT_KEYWORDS, "Google News")
+    sig_b = scan(f'"{k["name"]}" vacature', NL_KEYWORDS, "Google News (vacatures)")
+    # basis + signaal impact → score 0-100
+    score_a = min(100, 30 + sum(s["gewicht"] for s in sig_a) * 6)
+    score_b = min(100, 30 + sum(s["gewicht"] for s in sig_b) * 6)
+    leads.append({
+        "name": k["name"], "city": k["city"],
+        "score_out": score_a, "score_nl": score_b,
+        "signalen": sig_a + sig_b,
+    })
+
+out = {
+    "gegenereerd": datetime.datetime.now().isoformat(),
+    "bron_verklaring": "Score = startwaarde + gewogen keyword-trefters. Demo-kwaliteit: geen echte AI-interpretering.",
+    "leads": leads,
+}
+with open("leads.json", "w", encoding="utf-8") as f:
+    json.dump(out, f, ensure_ascii=False, indent=2)
+print(f"{len(leads)} kantoren gescand — scores A (outsourcing) en B (NL-plaatsing)")
