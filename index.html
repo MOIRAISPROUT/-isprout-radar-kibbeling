@@ -134,7 +134,11 @@ document.querySelectorAll("nav button").forEach(b=>b.onclick=()=>{cur=b.dataset.
 const TITLES={radar:["AI Lead Radar","Twee opties per lead: A = outsourcing (remote ZA), B = plaatsing in NL. Elke kaart legt uit WAAROM hij een lead is."],map:["Kantorenkaart","Alle kantoren uit de masterlijst. Groen = A-dominant, blauw = B-dominant, grijs = nog geen signalen."],net:["Netwerkoverzicht","Eén deal bij een lid kan doorschijnen naar zusterkantoren."],ev:["Evenementen","Sectorevents met salespotentieel — met agenda-export en eigen events."]};
 
 function render(){const[t,s]=TITLES[cur];document.getElementById("htitle").textContent=t;document.getElementById("hsub").textContent=s+(SRC==="live"?" · LIVE data: "+DATA.length+" kantoren":" · Demodata");selected=null;
- if(cur==="radar")renderRadar();else if(cur==="map")renderMap();else if(cur==="net")renderNet();else renderEv();}
+ if(cur==="radar")renderRadar();else if(cur==="map")renderMap();else if(cur==="net")renderNet();else renderEv();} // Aanbevelingen: koppel events aan je hot leads
+ const hot=[...DATA].filter(o=>Math.max(o.score_out,o.score_nl)>=75).sort((a,b)=>Math.max(b.score_out,b.score_nl)-Math.max(a.score_out,a.score_nl)).slice(0,5);
+ const rec=document.createElement("div");rec.className="demo-note";
+ rec.innerHTML=hot.length?`<b style="color:var(--accent)">💡 Aanbevolen aanpak:</b> benader deze leads vóóraf bij het eerstvolgende netwerkevent — ${hot.map(o=>o.name).join(" · ")}. Zo kom je op het event met afspraken in plaats van met visitekaartjes.`:`Nog geen hot leads — draai een scan zodat aanbevelingen gevuld worden.`;
+ document.getElementById("evLijst").before(rec);
 
 // ===== RADAR =====
 function renderRadar(){
@@ -243,8 +247,14 @@ function ics(ev){
  const a=document.createElement("a");a.href=URL.createObjectURL(b);a.download=ev.n.replace(/\W+/g,"-")+".ics";a.click();
 }
 function laadEv(){return BASIS.concat(JSON.parse(localStorage.getItem("isprout_events")||"[]"))}
-let evFilter="";
-function renderEv(){
+// Live events uit de scanner
+let LIVE_EVENTS=[];
+fetch("events.json").then(r=>r.ok?r.json():Promise.reject()).then(d=>{
+  LIVE_EVENTS=(d.events||[]).map(e=>({n:e.naam,d:"",t:"net",l:"datum check via bron",tag:"🆕 Gevonden door scanner ("+(e.gevonden||"")+"))".replace("))",")"),url:e.link,live:true}));
+  if(cur==="ev")renderEv();
+}).catch(()=>{});
+  let evFilter="";
+function laadEv(){return LIVE_EVENTS.concat(BASIS, JSON.parse(localStorage.getItem("isprout_events")||"[]"))}
  view.innerHTML=`<div class="demo-note">⚠ Behalve het Audit Event (1-3-27) en het AV-padeltoernooi zijn datums nog TBC — check de organisator zodra 2027-datums gepubliceerd worden.</div>
  <div class="filters" id="evFilters">
   <button data-f="" class="filtbtn on">Alles</button>
