@@ -1,21 +1,55 @@
-# MASTERLIJST — AV-Top 50 2025 (bron: accountancyvanmorgen.nl, gepubliceerd 27 nov 2025)
-# (naam, omzet 2024 in mln euro, medewerkers/fte 2024)
-KANTOREN = [
-    ("Deloitte", 1394.0, 7780), ("EY", 1094.0, 4881), ("PwC", 1079.5, 5569),
-    ("KPMG", 770.9, 4309), ("BDO", 379.9, 2965), ("de Jong & Laan", 267.8, 1874),
-    ("Flynth", 237.9, 1656), ("aaff", 208.9, 1607), ("Forvis Mazars", 165.3, 1147),
-    ("Newtone", 150.0, 946), ("Baker Tilly", 148.9, 947), ("Moore MKW", 105.4, 806),
-    ("ETL", 105.3, 902), ("Grant Thornton", 104.0, 639), ("RSM", 94.2, 562),
-    ("Crowe Foederer", 91.6, 584), ("PIA", 89.6, 578), ("Countus", 75.6, 570),
-    ("Unia", 68.9, 371), ("Visser & Visser", 59.9, 405), ("Van Oers", 54.3, 435),
-    ("CROP", 46.1, 312), ("Schipper Groep", 43.3, 290), ("Vermetten", 38.4, 274),
-    ("Bentacera", 34.9, 279), ("Bol Adviseurs", 32.8, 243), ("Eshuis", 32.0, 246),
-    ("DK", 30.1, 210), ("Vallei", 29.3, 189), ("Qconcepts", 29.3, 134),
-    ("Van Ree Accountants", 29.2, 200), ("Van Braak", 28.0, 208), ("Omnyacc", 23.3, 184),
-    ("De Hooge Waerder", 22.9, 156), ("Stolwijk", 22.8, 172), ("JAN", 22.0, 142),
-    ("BonsenReuling", 20.3, 142), ("Crowe Peak", 19.7, 122), ("Kreston Lentink", 19.4, 117),
-    ("Lansigt", 19.2, 125), ("Hoek en Blok", 19.1, 138), ("Joanknecht", 18.4, 142),
-    ("Koeleman", 18.2, 154), ("WEA Deltaland", 17.5, 149), ("HLB Blömer", 17.2, 107),
-    ("Londen & Van Holland", 16.9, 105), ("Baat", 16.6, 96), ("ABIN", 16.5, 98),
-    ("Van der Veen & Kromhout", 16.0, 112), ("Wesselman", 14.8, 111), ("OOvB", 14.4, 107),
-]
+# scraper.py — scant ALLE accountancykantoren uit de NBA-export (kantoren.json)
+import feedparser, json, time, datetime
+
+RAW = json.load(open("kantoren.json", encoding="utf-8"))
+
+# 1. Unieke kantoren uit vestigingsdata (dedupe op naam, coördinaat = HQ-pin)
+kantoren = {}
+for r in RAW:
+    naam = (r.get("Name") or "").strip()
+    if not naam or len(naam) < 3:
+        continue
+    key = naam.lower()
+    if key not in kantoren:
+        kantoren[key] = {
+            "name": naam,
+            "city": (r.get("City") or "").title(),
+            "lat": r.get("Latitude"),
+            "lng": r.get("Longitude"),
+        }
+print(f"{len(RAW)} vestigingen ingelezen → {len(kantoren)} unieke kantoren")
+
+# 2. Signaalwoorden (A = outsourcing, B = plaatsing NL)
+WOORDEN_A = {"outsourc":5,"uitbested":5,"backoffice":4,"werkvoorraad":4,"werkdruk":3,
+             "capaciteit":4,"capacity":4,"remote":3,"op afstand":3}
+WOORDEN_B = {"vacature":2,"werving":3,"relocatie":4,"expat":4,"instroom":2,"rekruteert":3}
+WOORDEN_G = {"overname":3,"fusie":3,"groei":2,"groeit":2,"expandert":2}
+
+def gewicht(t, wb):
+    t = t.lower()
+    return sum(w for kw, w in wb.items() if kw in t)
+
+# 3. Scan (één Google News-query per kantoor — bevat ook AV-artikelen)
+leads = []
+for i, k in enumerate(kantoren.values()):
+    q = f'"{k["name"]}" (overname OR groei OR vacature OR outsourcing OR uitbesteden OR werving)'
+    url = f"https://news.google.com/rss/search?q={q.replace(' ', '+')}&hl=nl&gl=NL&ceid=NL:nl"
+    sigs = []
+    try:
+        for e in feedparser.parse(url).entries[:10]:
+            gA, gB, gG = (gewicht(e.title, wb) for wb in (WOORDEN_A, WOORDEN_B, WOORDEN_G))
+            if gA + gB + gG > 0:
+                sigs.append({"titel": e.title, "link": e.link, "datum": e.published,
+                             "bron": "Google News", "a": gA, "b": gB, "groei": gG})
+    except Exception as ex:
+        print(f"fout bij {k['name']}: {ex}")
+    sA = min(100, 30 + sum(s["a"] for s in sigs) * 8 + sum(s["groei"] for s in sigs) * 4)
+    sB = min(100, 30 + sum(s["b"] for s in sigs) * 8)
+    leads.append({**k, "score_out": sA, "score_nl": sB, "signalen": sigs})
+    if i % 100 == 0:
+        print(f"...{i}/{len(kantoren)} gescand")
+
+json.dump({"gegenereerd": str(datetime.datetime.now()), "bron": "NBA kantorenzoeker + Google News",
+           "let_op": "Keyword-scores, geen AI.", "leads": leads},
+          open("leads.json", "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+print("Klaar.")
