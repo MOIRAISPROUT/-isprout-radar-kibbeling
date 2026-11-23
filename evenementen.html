@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<title>iSprout Radar — Evenementen</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+:root{--mint:#cfe7d4;--accent:#2e6b4f;--accent-d:#245640;--dark:#181b17;--bg:#f6f5f1;--card:#fff;--txt:#151a16;--mut:#5d675f;--line:#e4e2da}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Poppins',system-ui,sans-serif;background:var(--bg);color:var(--txt);padding:24px;max-width:900px;margin:0 auto}
+h1{font-size:24px;display:flex;align-items:center;gap:10px}
+.sub{color:var(--mut);font-size:13px;margin:6px 0 20px}
+.note{font-size:11px;color:var(--mut);background:#f2f0e6;padding:8px 12px;border-radius:8px;margin-bottom:18px}
+.filters{display:flex;gap:8px;margin-bottom:16px;flex-wrap:wrap}
+.filters button{background:#fff;border:1px solid var(--line);border-radius:99px;padding:6px 14px;font-size:13px;cursor:pointer;font-family:inherit}
+.filters button.on{background:var(--accent);color:#fff;border-color:var(--accent)}
+.ev{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;margin-bottom:10px;display:flex;gap:14px;align-items:flex-start}
+.datebox{width:62px;flex-shrink:0;background:var(--mint);border-radius:10px;text-align:center;padding:8px 4px;color:#1c3326}
+.datebox .d{font-size:20px;font-weight:700}
+.datebox .m{font-size:11px;font-weight:600}
+.datebox.tbc{background:#e4e2da}
+.ev h3{font-size:15px}
+.ev p{font-size:12px;color:var(--mut);margin:2px 0}
+.chip{display:inline-block;padding:2px 9px;border-radius:99px;font-size:11px;font-weight:600;margin-right:4px}
+.chip.conf{background:#dfe7f5;color:#24406e}.chip.net{background:var(--mint);color:#1c3326}.chip.sport{background:#f5ecd9;color:#8a6d2f}.chip.eigen{background:#f7e3df;color:#b4443a}
+.ev .act{margin-left:auto;display:flex;flex-direction:column;gap:6px}
+.btn{background:var(--accent);color:#fff;border:none;padding:7px 12px;border-radius:8px;font-size:12px;cursor:pointer;font-family:inherit}
+.btn.ghost{background:#fff;color:var(--accent);border:1px solid var(--accent)}
+.btn:hover{background:var(--accent-d)}
+form{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;margin:20px 0}
+form h2{font-size:16px;margin-bottom:10px}
+form input,form select{padding:8px;border:1px solid var(--line);border-radius:8px;font-size:13px;font-family:inherit;margin:0 8px 8px 0}
+form input[type=text]{width:300px}
+.del{color:var(--mut);font-size:11px;cursor:pointer;text-decoration:underline}
+</style>
+</head>
+<body>
+<h1><svg width="46" height="18" viewBox="0 0 46 18"><circle cx="9" cy="9" r="8" fill="#cfe7d4"/><path d="M23 1 a8 8 0 0 1 0 16 Z" fill="#cfe7d4"/><circle cx="37" cy="9" r="6.5" fill="#cfe7d4"/></svg> Evenementen</h1>
+<p class="sub">Sectorevents met salespotentieel — conferenties, netwerkdagen en sportevents. Klik "Agenda" voor een .ics-download.</p>
+<div class="note">⚠ Data 2027: alleen het Accountancy Audit Event (1 maart) en het AV-padeltoernooi (26 nov) zijn door jou bevestigd. Overige datums zijn indicatief (TBC) — check de website van de organisator vóórdat je planeet.</div>
+<div class="filters" id="filters">
+  <button data-f="" class="on">Alles</button>
+  <button data-f="conf">Conferenties</button>
+  <button data-f="net">Netwerk</button>
+  <button data-f="sport">Sport/Netwerk</button>
+  <button data-f="eigen">Mijn events</button>
+</div>
+<div id="lijst"></div>
+
+<form id="frm">
+  <h2>+ Eigen event toevoegen</h2>
+  <input type="text" id="eNaam" placeholder="Naam van het event">
+  <input type="date" id="eDatum">
+  <input type="text" id="eLoc" placeholder="Locatie (bijv. Utrecht)" style="width:180px">
+  <select id="eType"><option value="conf">Conferentie</option><option value="net">Netwerk</option><option value="sport">Sport/Netwerk</option></select>
+  <input type="text" id="eLink" placeholder="Website (optioneel)" style="width:220px">
+  <button class="btn" type="submit">Toevoegen</button>
+</form>
+
+<script>
+const BASIS=[
+{n:"Accountancy Audit Event",d:"2027-03-01",t:"conf",l:"Locatie TBC",tag:"Door jou ingesteld",url:""},
+{n:"AV-Padeltoernooi (Accountancy Vanmorgen)",d:"2026-11-26",t:"sport",l:"Peakz Padel Vechtsebanen, Utrecht",tag:"a.s. donderdag — met Wey & Fields Group",url:"https://www.accountancyvanmorgen.nl"},
+{n:"Accountantsdag (NBA)",d:"",t:"conf",l:"Nog onbekend",tag:"2026-editie was 17 nov — 2027-datum TBC",url:"https://www.nba.nl"},
+{n:"Payroll Day / Payroll Awards",d:"",t:"net",l:"Nog onbekend",tag:"Doorgaans voorjaar — 2027 TBC",url:""},
+{n:"Nationaal Congres Familiebedrijven (AV)",d:"",t:"conf",l:"Nog onbekend",tag:"Jaarlijks AV-congres — 2027 TBC",url:"https://www.accountancyvanmorgen.nl"},
+{n:"PKF-vergadering / netwerkdag",d:"",t:"net",l:"Nog onbekend",tag:"Door jou genoemd — datum TBC",url:""},
+{n:"AV-Top 50 presentatie",d:"",t:"net",l:"Nog onbekend",tag:"Jaarlijkse ranglijst grootste kantoren — 2027 TBC",url:"https://www.accountancyvanmorgen.nl"},
+];
+const MN=["JAN","FEB","MAA","APR","MEI","JUN","JUL","AUG","SEP","OKT","NOV","DEC"];
+const TL={conf:"Conferentie",net:"Netwerk",sport:"Sport/Netwerk",eigen:"Eigen event"};
+function ics(ev){
+ const dt=ev.d.replace(/-/g,"");
+ const end=new Date(+ev.d.slice(0,4),+ev.d.slice(5,7)-1,+ev.d.slice(8,10)+1).toISOString().slice(0,10).replace(/-/g,"");
+ const b=new Blob([`BEGIN:VCALENDAR\nVERSION:2.0\nPRODID:-//iSprout Radar//NL\nBEGIN:VEVENT\nUID:${Date.now()}@isprout\nDTSTART;VALUE=DATE:${dt}\nDTEND;VALUE=DATE:${end}\nSUMMARY:${ev.n}\nLOCATION:${ev.l}\nDESCRIPTION:iSprout Radar event — ${TL[ev.t]}\nEND:VEVENT\nEND:VCALENDAR`],{type:"text/calendar"});
+ const a=document.createElement("a");a.href=URL.createObjectURL(b);a.download=ev.n.replace(/\W+/g,"-")+".ics";a.click();
+}
+function laad(){return BASIS.concat(JSON.parse(localStorage.getItem("isprout_events")||"[]"))}
+let filter="";
+function toon(){
+ const lijst=document.getElementById("lijst");
+ const evs=laad().sort((a,b)=>(a.d||"9999")<(b.d||"9999")?-1:1).filter(e=>!filter||e.t===filter);
+ lijst.innerHTML=evs.map((e,i)=>{
+  const d=e.d?e.d.slice(8,10):"?",m=e.d?MN[+e.d.slice(5,7)-1]:"TBC";
+  return `<div class="ev"><div class="datebox ${e.d?"":"tbc"}"><div class="d">${d}</div><div class="m">${m}</div></div>
+  <div><h3>${e.n}</h3><p>${e.l}</p><span class="chip ${e.t}">${TL[e.t]}</span><span style="font-size:11px;color:var(--mut)">${e.tag||""}</span>${e.url?`<br><a href="${e.url}" target="_blank" style="font-size:11px">website ↗</a>`:""}${e.eigen?`<br><span class="del" data-i="${i}">verwijderen</span>`:""}</div>
+  <div class="act">${e.d?`<button class="btn" onclick='ics(${JSON.stringify(e)})'>📅 Agenda</button>`:""}${e.n.includes("Padel")||e.t==="net"?`<button class="btn ghost" onclick="alert('Demo-tip: check welke leads in de Radar uit de regio van dit event komen')">Leads in regio</button>`:""}</div></div>`;
+ }).join("");
+ lijst.querySelectorAll(".del").forEach(x=>x.onclick=()=>{
+  const arr=JSON.parse(localStorage.getItem("isprout_events")||"[]");
+  arr.splice(+x.dataset.i-BASIS.length,1);localStorage.setItem("isprout_events",JSON.stringify(arr));toon();
+ });
+}
+document.getElementById("filters").querySelectorAll("button").forEach(b=>b.onclick=()=>{
+ filter=b.dataset.f;document.querySelectorAll("#filters button").forEach(x=>x.classList.remove("on"));b.classList.add("on");toon();
+});
+document.getElementById("frm").onsubmit=e=>{
+ e.preventDefault();
+ const ev={n:eNaam.value,d:eDatum.value,t:eType.value,l:eLoc.value||"—",tag:"Eigen toevoeging",url:eLink.value,eigen:true};
+ if(!ev.n||!ev.d)return alert("Naam en datum zijn verplicht");
+ const arr=JSON.parse(localStorage.getItem("isprout_events")||"[]");arr.push(ev);
+ localStorage.setItem("isprout_events",JSON.stringify(arr));frm.reset();toon();
+};
+toon();
+</script>
+</body>
+</html>
