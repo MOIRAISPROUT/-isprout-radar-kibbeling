@@ -13,7 +13,7 @@ body{font-family:'Poppins',system-ui,sans-serif;background:var(--bg);color:var(-
 nav{width:230px;background:var(--dark);color:#c9d6cd;padding:18px 0;flex-shrink:0;display:flex;flex-direction:column}
 nav h1{color:var(--mint);font-size:16px;padding:0 20px 4px;display:flex;align-items:center;gap:8px}
 nav .sub{font-size:11px;padding:0 20px 18px;color:#8a978d}
-nav button{display:block;width:100%;background:none;border:none;color:#c9d6cd;text-align:left;padding:11px 20px;font-size:14px;cursor:pointer;border-left:3px solid transparent}
+nav button{display:block;width:100%;background:none;border:none;color:#c9d6cd;text-align:left;padding:11px 20px;font-size:14px;cursor:pointer;border-left:3px solid transparent;font-family:inherit}
 nav button:hover{background:#232822}
 nav button.active{background:#232822;border-left-color:var(--mint);color:#fff}
 nav .note{margin-top:auto;font-size:11px;color:#8a978d;padding:14px 20px;border-top:1px solid #232822}
@@ -25,10 +25,11 @@ header h2{font-size:19px}header p{font-size:12px;color:var(--mut)}
 .kpi{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 18px;min-width:150px;flex:1}
 .kpi .v{font-size:26px;font-weight:700;color:var(--accent)}.kpi .l{font-size:12px;color:var(--mut)}
 .filters{display:flex;gap:10px;margin-bottom:16px;flex-wrap:wrap;align-items:center}
-select,input[type=range]{padding:8px;border:1px solid var(--line);border-radius:8px;background:#fff;font-size:13px}
+select,input[type=range]{padding:8px;border:1px solid var(--line);border-radius:8px;background:#fff;font-size:13px;font-family:inherit}
 .chip{display:inline-block;padding:2px 9px;border-radius:99px;font-size:11px;font-weight:600}
 .chip.a{background:var(--mint);color:#1c3326}.chip.b{background:#dfe7f5;color:#24406e}
 .chip.hot{background:#f7e3df;color:var(--crit)}.chip.mid{background:#f5ecd9;color:var(--warn)}.chip.low{background:#e3efe6;color:var(--ok)}
+.chip.conf{background:#dfe7f5;color:#24406e}.chip.net{background:var(--mint);color:#1c3326}.chip.sport{background:#f5ecd9;color:#8a6d2f}.chip.eigen{background:#f7e3df;color:#b4443a}
 .lead{background:var(--card);border:1px solid var(--line);border-radius:14px;margin-bottom:10px;overflow:hidden}
 .lead-head{display:flex;align-items:center;gap:14px;padding:13px 16px;cursor:pointer}.lead-head:hover{background:#faf9f5}
 .rank{width:30px;height:30px;border-radius:8px;background:var(--accent);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:13px;flex-shrink:0}
@@ -42,16 +43,33 @@ select,input[type=range]{padding:8px;border:1px solid var(--line);border-radius:
 .sig{background:var(--bg);border-radius:8px;padding:8px 12px;font-size:12px;margin:5px 0}
 .sig b{color:var(--accent)}
 .outreach{background:var(--dark);color:#d8e4da;border-radius:8px;padding:12px 14px;font-size:13px;margin-top:10px;white-space:pre-wrap}
-.btn{background:var(--accent);color:#fff;border:none;padding:8px 14px;border-radius:8px;font-size:13px;cursor:pointer}
+.btn{background:var(--accent);color:#fff;border:none;padding:8px 14px;border-radius:8px;font-size:13px;cursor:pointer;font-family:inherit}
 .btn:hover{background:var(--accent-d)}
+.btn.ghost{background:#fff;color:var(--accent);border:1px solid var(--accent)}
+.btn.ghost:hover{background:var(--mint)}
 #mapwrap{display:flex;gap:16px;height:calc(100vh - 170px)}
 #map{flex:1;border-radius:14px;border:1px solid var(--line)}
 #panel{width:360px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;overflow:auto;flex-shrink:0}
 .tabs{display:flex;gap:6px;margin:12px 0;border-bottom:1px solid var(--line)}
-.tabs button{background:none;border:none;padding:8px 10px;cursor:pointer;font-size:13px;border-bottom:2px solid transparent;color:var(--mut)}
+.tabs button{background:none;border:none;padding:8px 10px;cursor:pointer;font-size:13px;border-bottom:2px solid transparent;color:var(--mut);font-family:inherit}
 .tabs button.on{color:var(--accent);border-bottom-color:var(--accent);font-weight:600}
 .dept{border:1px solid var(--line);border-radius:10px;padding:10px 12px;margin-bottom:8px;font-size:13px;cursor:pointer}
 .dept:hover{border-color:var(--accent)}
+.datebox{width:62px;flex-shrink:0;background:var(--mint);border-radius:10px;text-align:center;padding:8px 4px;color:#1c3326}
+.datebox .d{font-size:20px;font-weight:700}
+.datebox .m{font-size:11px;font-weight:600}
+.datebox.tbc{background:#e4e2da}
+.ev{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;margin-bottom:10px;display:flex;gap:14px;align-items:flex-start}
+.ev h3{font-size:15px}
+.ev p{font-size:12px;color:var(--mut);margin:2px 0}
+.ev .act{margin-left:auto;display:flex;flex-direction:column;gap:6px}
+.filtbtn{background:#fff;border:1px solid var(--line);border-radius:99px;padding:6px 14px;font-size:13px;cursor:pointer;font-family:inherit}
+.filtbtn.on{background:var(--accent);color:#fff;border-color:var(--accent)}
+form{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;margin:20px 0}
+form h2{font-size:16px;margin-bottom:10px}
+form input,form select{padding:8px;border:1px solid var(--line);border-radius:8px;font-size:13px;font-family:inherit;margin:0 8px 8px 0}
+form input[type=text]{width:300px}
+.del{color:var(--mut);font-size:11px;cursor:pointer;text-decoration:underline}
 .demo-note{font-size:11px;color:var(--mut);background:#f2f0e6;padding:8px 12px;border-radius:8px;margin-bottom:14px}
 </style>
 </head>
@@ -62,8 +80,8 @@ select,input[type=range]{padding:8px;border:1px solid var(--line);border-radius:
   <button data-view="radar" class="active">🎯 AI Lead Radar</button>
   <button data-view="map">🗺️ Kantorenkaart</button>
   <button data-view="net">🕸️ Netwerkoverzicht</button>
-  <button onclick="location.href='evenementen.html'">📅 Evenementen</button>
-  <div class="note">Live data uit leads.json indien beschikbaar, anders demo-data.<br>Scores zijn indicatief.</div>
+  <button data-view="ev">📅 Evenementen</button>
+  <div class="note">Live data uit leads.json indien beschikbaar, anders demo-data.<br>Scores zijn indicatief (keyword-based).</div>
 </nav>
 <main>
 <header><h2 id="htitle"></h2><p id="hsub"></p></header>
@@ -75,47 +93,27 @@ const DEPT_L={audit:"Audit & Assurance",payroll:"Payroll & Administratie",tax:"B
 // ===== DEMODATA (fallback als leads.json ontbreekt) =====
 const DEMO=[
 {id:1,name:"H2K Penning",group:"H2K",city:"Helmond",lat:51.48,lng:5.66,size:"middelgroot",mdw:290,score_out:92,score_nl:71,dept:{audit:120,payroll:95,tax:45,advisory:30},
- sigs:[["A","Publiceert 6 payroll-outsourcing-vacatures in één maand","Accountancy Vanmorgen",5],["B","14 openstaande vacatures >90 dagen online","Werkgeverssite",4],["A","Spreekt over 'capaciteit op afstand' in interview","Podcast",3]]},
+ sigs:[["A","Publiceert 6 payroll-outsourcing-vacatures in één maand","Accountancy Vanmorgen",5],["B","14 openstaande vacatures >90 dagen online","Werkgeverssite",4],["A","Spreekt over 'capaciteit op afstand' in interview","Podcast",3]],vac:3},
 {id:2,name:"VBK Groep",group:"VBK",city:"Vianen",lat:51.99,lng:5.10,size:"middelgroot",mdw:410,score_out:88,score_nl:64,dept:{audit:150,payroll:140,tax:70,advisory:50},
- sigs:[["A","Interim-coördinator 'outsourced accounting services' gezocht","Vacaturebank",5],["A","Overnamepoging middelgroot kantoor","Nieuws",2]]},
+ sigs:[["A","Interim-coördinator 'outsourced accounting services' gezocht","Vacaturebank",5],["A","Overnamepoging middelgroot kantoor","Nieuws",2]],vac:1},
 {id:3,name:"Flynth Adviseurs en Accountants",group:"Flynth",city:"Zaandam",lat:52.44,lng:4.83,size:"middelgroot",mdw:340,score_out:85,score_nl:78,dept:{audit:110,payroll:130,tax:60,advisory:40},
- sigs:[["A","HR-directeur in pers: 'we komen mensen niet meer aan'","Nieuws",4],["B","Zeven vacatures, incl. relocate-vriendelijk","Vacaturebank",4]]},
+ sigs:[["A","HR-directeur in pers: 'we komen mensen niet meer aan'","Nieuws",4],["B","Zeven vacatures, incl. relocate-vriendelijk","Vacaturebank",4]],vac:2},
 {id:4,name:"Ten Holter Nolet",group:"Onafhankelijk",city:"Oosterhout",lat:51.62,lng:4.86,size:"middelgroot",mdw:210,score_out:83,score_nl:59,dept:{audit:90,payroll:60,tax:40,advisory:20},
- sigs:[["A","Neemt drie kantoren over — werkvoorraad groeit","Nieuws",3],["A","12 audit-assistent-vacatures","Vacaturebank",3]]},
-{id:5,name:"Withaccountants & Adviseurs",group:"Onafhankelijk",city:"Tilburg",lat:51.56,lng:5.09,size:"middelgroot",mdw:180,score_out:81,score_nl:66,dept:{audit:80,payroll:55,tax:30,advisory:15},
- sigs:[["A","Partner op LinkedIn over 'verdelen van compliance-werk'","LinkedIn",4],["B","Payroll-consultant gezocht, hybride","Vacaturebank",3]]},
-{id:6,name:"Accon AVM",group:"Accon AVM",city:"Almelo",lat:52.36,lng:6.67,size:"middelgroot",mdw:320,score_out:79,score_nl:62,dept:{audit:130,payroll:100,tax:50,advisory:40},
- sigs:[["A","Twelve vacatures >60 dagen online in Twente","Werkgeverssite",4],["B","Klantportefeuille +9% YoY","Jaarreport",2]]},
-{id:7,name:"JA Accountants & Adviseurs",group:"JA Groep",city:"Groningen",lat:53.22,lng:6.57,size:"middelgroot",mdw:260,score_out:77,score_nl:70,dept:{audit:100,payroll:80,tax:45,advisory:35},
- sigs:[["A","'Accounting op afstand'-pilot naar volle productie","Intern",3],["B","Vijf senior payroll-openingen","Vacaturebank",3]]},
-{id:8,name:"Meijburg & Co (KPMG Tax)",group:"KPMG",city:"Amstelveen",lat:52.30,lng:4.86,size:"groot",mdw:1100,score_out:76,score_nl:80,dept:{audit:400,payroll:150,tax:350,advisory:200},
- sigs:[["A","Global lead: 'smart reshoring van run-werk'","Congres",3],["B","Internationaal talentprogramma uitgebreid","Nieuws",4]]},
-{id:9,name:"BDO Nederland",group:"BDO",city:"Ede",lat:52.05,lng:5.66,size:"groot",mdw:1400,score_out:74,score_nl:75,dept:{audit:520,payroll:380,tax:280,advisory:220},
- sigs:[["A","Landelijke campagne payroll-professionals","Werkgeverssite",3],["B","Overweegt centralisatie backoffice","Panel",2]]},
-{id:10,name:"Moïse Partners",group:"Onafhankelijk",city:"Tilburg",lat:51.58,lng:5.07,size:"klein",mdw:38,score_out:73,score_nl:52,dept:{audit:14,payroll:12,tax:8,advisory:4},
- sigs:[["A","Partner vraagt publiek om capacity-partners","LinkedIn",5]]},
-{id:11,name:"Hof Hoorneman",group:"HH-Bedrijfsadviseurs",city:"Vught",lat:51.65,lng:5.37,size:"middelgroot",mdw:190,score_out:71,score_nl:55,dept:{audit:85,payroll:50,tax:35,advisory:20},
- sigs:[["A","Agro-portefeuille gegroeid","Nieuws",2],["A","Vier payroll-vacatures","Vacaturebank",3]]},
-{id:12,name:"Draaijer & Partners",group:"Onafhankelijk",city:"Hoogeveen",lat:52.72,lng:6.48,size:"klein",mdw:45,score_out:70,score_nl:58,dept:{audit:18,payroll:15,tax:8,advisory:4},
- sigs:[["A","'Aanpakken werkpressure' in ledenbrief","Branchebrief",4],["B","Geen werving sinds juni","Analyse",2]]},
-{id:13,name:"Baker Tilly",group:"Baker Tilly",city:"Nieuwegein",lat:52.03,lng:5.10,size:"middelgroot",mdw:300,score_out:68,score_nl:69,dept:{audit:120,payroll:90,tax:55,advisory:35},
- sigs:[["A","Test outsourced bookkeeping in één vestiging","Markt",3],["B","Zoekt adviseurs, relocate optie mogelijk","Vacaturebank",3]]},
-{id:14,name:"Krüger Accountants & Adviseurs",group:"Onafhankelijk",city:"Enschede",lat:52.22,lng:6.89,size:"klein",mdw:60,score_out:66,score_nl:49,dept:{audit:25,payroll:20,tax:10,advisory:5},
- sigs:[["A","Parttime payroll-vacature al maanden open","Vacaturebank",3]]},
-{id:15,name:"Grant Thornton",group:"Grant Thornton",city:"Amsterdam",lat:52.34,lng:4.92,size:"groot",mdw:900,score_out:64,score_nl:82,dept:{audit:350,payroll:120,tax:230,advisory:200},
- sigs:[["B","Groot internationaal instroomprogramma","Nieuws",4],["A","Innovatielab over automatisering run-werk","Publicatie",2]]},
-{id:16,name:"Swinkels Accountants & Adviseurs",group:"Onafhankelijk",city:"Ede",lat:52.04,lng:5.67,size:"klein",mdw:42,score_out:63,score_nl:51,dept:{audit:16,payroll:14,tax:8,advisory:4},
- sigs:[["A","Junior vertrekt naar groot kantoor","LinkedIn",3]]},
-{id:17,name:"Van Wijgerden",group:"Onafhankelijk",city:"Amersfoort",lat:52.16,lng:5.39,size:"klein",mdw:28,score_out:61,score_nl:47,dept:{audit:10,payroll:10,tax:5,advisory:3},
- sigs:[["A","'Stappen richting digitalisering'","Website",2]]},
-{id:18,name:"Deloitte Nederland",group:"Deloitte",city:"Amsterdam",lat:52.33,lng:4.90,size:"groot",mdw:5000,score_out:58,score_nl:84,dept:{audit:1500,payroll:400,tax:1300,advisory:1800},
- sigs:[["B","Strenghte aan relocatie-support internationale hires","Nieuws",4],["A","Run-werk grotendeels geautomatiseerd","Nieuws",1]]},
-{id:19,name:"Furas Groep",group:"Furas",city:"Apeldoorn",lat:52.21,lng:5.97,size:"middelgroot",mdw:240,score_out:56,score_nl:53,dept:{audit:100,payroll:70,tax:45,advisory:25},
- sigs:[["A","Fusiegeruchten regionaal kantoor","Nieuws",2]]},
-{id:20,name:"Efficiensia",group:"Onafhankelijk",city:"Terneuzen",lat:51.33,lng:3.83,size:"klein",mdw:22,score_out:54,score_nl:44,dept:{audit:8,payroll:8,tax:4,advisory:2},
- sigs:[["A","Enige payroll-vacature sluit na drie maanden","Vacaturebank",2]]},
+ sigs:[["A","Neemt drie kantoren over — werkvoorraad groeit","Nieuws",3],["A","12 audit-assistent-vacatures","Vacaturebank",3]],vac:1},
+{id:5,name:"Moïse Partners",group:"Onafhankelijk",city:"Tilburg",lat:51.58,lng:5.07,size:"klein",mdw:38,score_out:73,score_nl:52,dept:{audit:14,payroll:12,tax:8,advisory:4},
+ sigs:[["A","Partner vraagt publiek om capacity-partners","LinkedIn",5]],vac:0},
+{id:6,name:"Meijburg & Co (KPMG Tax)",group:"KPMG",city:"Amstelveen",lat:52.30,lng:4.86,size:"groot",mdw:1100,score_out:76,score_nl:80,dept:{audit:400,payroll:150,tax:350,advisory:200},
+ sigs:[["A","Global lead: 'smart reshoring van run-werk'","Congres",3],["B","Internationaal talentprogramma uitgebreid","Nieuws",4]],vac:0},
+{id:7,name:"BDO Nederland",group:"BDO",city:"Ede",lat:52.05,lng:5.66,size:"groot",mdw:1400,score_out:74,score_nl:75,dept:{audit:520,payroll:380,tax:280,advisory:220},
+ sigs:[["A","Landelijke campagne payroll-professionals","Werkgeverssite",3]],vac:0},
+{id:8,name:"Grant Thornton",group:"Grant Thornton",city:"Amsterdam",lat:52.34,lng:4.92,size:"groot",mdw:900,score_out:64,score_nl:82,dept:{audit:350,payroll:120,tax:230,advisory:200},
+ sigs:[["B","Groot internationaal instroomprogramma","Nieuws",4]],vac:0},
+{id:9,name:"Krüger Accountants & Adviseurs",group:"Onafhankelijk",city:"Enschede",lat:52.22,lng:6.89,size:"klein",mdw:60,score_out:66,score_nl:49,dept:{audit:25,payroll:20,tax:10,advisory:5},
+ sigs:[["A","Parttime payroll-vacature al maanden open","Vacaturebank",3]],vac:1},
+{id:10,name:"Efficiensia",group:"Onafhankelijk",city:"Terneuzen",lat:51.33,lng:3.83,size:"klein",mdw:22,score_out:54,score_nl:44,dept:{audit:8,payroll:8,tax:4,advisory:2},
+ sigs:[],vac:0},
 ];
-const LOCS={1:[{n:"Helmond (HQ)",lat:51.48,lng:5.66},{n:"Eindhoven",lat:51.44,lng:5.48}],2:[{n:"Vianen (HQ)",lat:51.99,lng:5.10},{n:"Dordrecht",lat:51.81,lng:4.67}],3:[{n:"Zaandam (HQ)",lat:52.44,lng:4.83},{n:"Alkmaar",lat:52.63,lng:4.75}],9:[{n:"Ede (HQ)",lat:52.05,lng:5.66},{n:"Amsterdam",lat:52.35,lng:4.90},{n:"Rotterdam",lat:51.92,lng:4.48}]};
+const LOCS={1:[{n:"Helmond (HQ)",lat:51.48,lng:5.66},{n:"Eindhoven",lat:51.44,lng:5.48}],3:[{n:"Zaandam (HQ)",lat:52.44,lng:4.83},{n:"Alkmaar",lat:52.63,lng:4.75}],7:[{n:"Ede (HQ)",lat:52.05,lng:5.66},{n:"Amsterdam",lat:52.35,lng:4.90},{n:"Rotterdam",lat:51.92,lng:4.48}]};
 const OPTS={A:{label:"Optie A · Outsourcing",hint:"Remote capacity vanuit Zuid-Afrika — payroll, administratie, audit-support.",mail:(o,t)=>`Beste [partner ${o.name}],\n\nIk zag dat ${t.toLowerCase()} — bij kantoren van jullie formaat betekent dat vaak druk op de werkvoorraad.\n\niSprout levert remote professionals vanuit Zuid-Afrika: getraind, Nederlands begeleid, zonder lange wervingstijd.\n\nZullen we volgende week 20 minuten bellen?\n\nMet vriendelijke groet,\n[Naam] — iSprout`},
 B:{label:"Optie B · Plaatsing in NL",hint:"ZA-professional die naar Nederland komt en bij jullie in dienst treedt.",mail:(o,t)=>`Beste [partner ${o.name}],\n\nIk zag dat ${t.toLowerCase()} — dit soort posities zijn in Nederland heel lastig te vervullen.\n\niSprout plaatst toptalent van Zuid-Afrikaanse universiteiten bij jullie in Nederland: vaste aanstelling, met relocatie-support.\n\nZullen we verkennen of dat voor jullie past?\n\nMet vriendelijke groet,\n[Naam] — iSprout`}};
 
@@ -124,93 +122,171 @@ function tier(v){return v>=80?"hot":v>=60?"mid":"low"}
 // ===== DATA LADEN: leads.json indien aanwezig, anders demo =====
 let DATA=[],SRC="demo";
 fetch("leads.json").then(r=>{if(!r.ok)throw 0;return r.json()})
- .then(d=>{DATA=d.leads.map((l,i)=>({id:i+1,name:l.name,group:"",city:l.city,lat:52+(Math.random()-0.5)*1.6,lng:5.3+(Math.random()-0.5)*2.4,size:"middelgroot",mdw:"",score_out:l.score_out,score_nl:l.score_nl,sigs:(l.signalen||[]).map(s=>[s.type,s.titel,s.bron,Math.min(5,s.gewicht)])}));SRC="live";render();})
+ .then(d=>{DATA=d.leads.map((l,i)=>({id:i+1,name:l.name,group:"",city:l.city||"",lat:l.lat||52.2,lng:l.lng||5.3,size:l.fte?(l.fte>500?"groot":l.fte>50?"middelgroot":"klein"):"klein",mdw:l.fte||"",score_out:l.score_out||0,score_nl:l.score_nl||0,
+  sigs:(l.signalen||[]).map(s=>[((s.a||0)>=(s.b||0))?"A":"B",s.titel,s.bron,Math.max(s.a||0,s.b||0,s.groei||0),s.link||"",s.datum||""]),
+  vac:l.vacatures||0}));
+  SRC="live";render();})
  .catch(()=>{DATA=DEMO;render();});
 
 let cur="radar",selected=null,map=null,markers=[],locLayer=null;
 const view=document.getElementById("view");
 document.querySelectorAll("nav button").forEach(b=>b.onclick=()=>{cur=b.dataset.view;document.querySelectorAll("nav button").forEach(x=>x.classList.remove("active"));b.classList.add("active");render();});
-const TITLES={radar:["AI Lead Radar","Twee opties per lead: A = outsourcing (remote ZA), B = plaatsing in NL. Gesorteerd op beste optie."],map:["Kantorenkaart","Klik op een pin: overzicht, afdelingen en beide deal-opties."],net:["Netwerkoverzicht","Eén deal bij een lid kan doorschijnen naar zusterkantoren."]};
+const TITLES={radar:["AI Lead Radar","Twee opties per lead: A = outsourcing (remote ZA), B = plaatsing in NL. Elke kaart legt uit WAAROM hij een lead is."],map:["Kantorenkaart","Alle kantoren uit de masterlijst. Groen = A-dominant, blauw = B-dominant, grijs = nog geen signalen."],net:["Netwerkoverzicht","Eén deal bij een lid kan doorschijnen naar zusterkantoren."],ev:["Evenementen","Sectorevents met salespotentieel — met agenda-export en eigen events."]};
 
-function render(){const[t,s]=TITLES[cur];document.getElementById("htitle").textContent=t;document.getElementById("hsub").textContent=s+(SRC==="live"?" · Live data: "+DATA.length+" kantoren":" · Demodata");selected=null;if(cur==="radar")renderRadar();else if(cur==="map")renderMap();else renderNet();}
+function render(){const[t,s]=TITLES[cur];document.getElementById("htitle").textContent=t;document.getElementById("hsub").textContent=s+(SRC==="live"?" · LIVE data: "+DATA.length+" kantoren":" · Demodata");selected=null;
+ if(cur==="radar")renderRadar();else if(cur==="map")renderMap();else if(cur==="net")renderNet();else renderEv();}
 
 // ===== RADAR =====
 function renderRadar(){
- const top=[...DATA].map(o=>({...o,best:Math.max(o.score_out,o.score_nl)})).sort((a,b)=>b.best-a.best);
+ const top=[...DATA].map(o=>({...o,best:Math.max(o.score_out,o.score_nl)})).sort((a,b)=>b.best-a.best).slice(0,20);
  view.innerHTML=`<div class="cardrow">
-  <div class="kpi"><div class="v">${top.length}</div><div class="l">Kantoren in scan</div></div>
-  <div class="kpi"><div class="v">${top.filter(o=>o.score_out>=80).length}</div><div class="l">Sterke A-leads (outsourcing ≥80)</div></div>
-  <div class="kpi"><div class="v">${top.filter(o=>o.score_nl>=80).length}</div><div class="l">Sterke B-leads (plaatsing ≥80)</div></div>
+  <div class="kpi"><div class="v">${DATA.length}</div><div class="l">Kantoren in scan</div></div>
+  <div class="kpi"><div class="v">${DATA.filter(o=>o.score_out>=80).length}</div><div class="l">Sterke A-leads (outsourcing ≥80)</div></div>
+  <div class="kpi"><div class="v">${DATA.filter(o=>o.score_nl>=80).length}</div><div class="l">Sterke B-leads (plaatsing ≥80)</div></div>
   <div class="kpi"><div class="v">${SRC==="live"?"LIVE":"DEMO"}</div><div class="l">Datastatus</div></div></div>
  <div class="filters">
   <select id="fOpt"><option value="">Beide opties</option><option value="A">Alleen outsourcing (A)</option><option value="B">Alleen plaatsing NL (B)</option></select>
-  <select id="fSeg"><option value="">Alle segmenten</option><option value="klein">Klein</option><option value="middelgroot">Middelgroot</option><option value="groot">Groot</option></select>
-  <span style="font-size:13px">Min.score <b id="fMinV">50</b></span><input type="range" id="fMin" min="40" max="90" value="50" style="width:130px">
+  <span style="font-size:13px">Min.score <b id="fMinV">30</b></span><input type="range" id="fMin" min="30" max="90" value="30" style="width:130px">
  </div><div id="leadList"></div>`;
  const paint=()=>{
-  const fo=document.getElementById("fOpt").value,seg=document.getElementById("fSeg").value,min=+document.getElementById("fMin").value;
+  const fo=document.getElementById("fOpt").value,min=+document.getElementById("fMin").value;
   document.getElementById("fMinV").textContent=min;
-  const sel=top.filter(o=>(!fo||(fo==="A"?o.score_out:o.score_nl)>=min)&&(!seg||o.size===seg)).slice(0,20);
+  const sel=top.filter(o=>(!fo||(fo==="A"?o.score_out:o.score_nl)>=min));
   const list=document.getElementById("leadList");list.innerHTML="";
   sel.forEach((o,i)=>{
    const aFirst=o.score_out>=o.score_nl,d=document.createElement("div");d.className="lead";
+   const sigHTML=(o.sigs||[]).length
+    ? o.sigs.map(s=>`<div class="sig"><span class="chip ${s[0]==="A"?"a":"b"}">${s[0]}</span> <b>${s[1]}</b>${s[4]?` <a href="${s[4]}" target="_blank" rel="noopener" style="font-size:11px">bron ↗</a>`:""}<br><small style="color:var(--mut)">Bron: ${s[2]} · gewicht ${s[3]}/5${s[5]?" · "+s[5].slice(0,16):""}</small></div>`).join("")
+    : `<div class="sig"><b>Nog geen signalen gevonden.</b><br><small style="color:var(--mut)">Dit kantoor staat op de masterlijst (basis-score). Zodra er nieuws verschijnt (overname, groei, outsourcing, vacatures) stijgt de score automatisch en lees je hier precies waarom.</small></div>`;
    d.innerHTML=`<div class="lead-head"><div class="rank">${i+1}</div>
     <div><div class="name">${o.name} <span class="chip a">A ${o.score_out}</span> <span class="chip b">B ${o.score_nl}</span></div>
-    <div class="meta">${o.city}${o.mdw?" · "+o.mdw+" mdw":""}${o.group&&o.group!=="Onafhankelijk"&&o.group!==o.name?" · netwerk: "+o.group:""}</div></div>
+    <div class="meta">${o.city||"—"}${o.mdw?" · "+o.mdw+" fte":""}${o.group?" · netwerk: "+o.group:""}</div></div>
     <div><span class="chip ${tier(o.best)}">${aFirst?"BESTE: A":"BESTE: B"}</span></div></div>
-   <div class="lead-body">${["A","B"].map(k=>{const sc=k==="A"?o.score_out:o.score_nl,ts=(o.sigs||[]).filter(s=>s[0]===k),t2=ts.length?ts[0][1]:"geen signaal gevonden";
-    return `<div class="opt"><h4>${OPTS[k].label}<span><b>${sc}</b>/100</span></h4><small style="color:var(--mut)">${OPTS[k].hint}</small>
-     ${ts.map(s=>`<div class="sig"><b>${s[1]}</b><br><small style="color:var(--mut)">Bron: ${s[2]} · gewicht ${s[3]}/5</small></div>`).join("")||"<small style='color:var(--mut)'>Nog geen signalen — score is basisinschatting.</small>"}
+   <div class="lead-body">
+    <b style="font-size:13px;display:block;margin:10px 0 4px">WAAROM EEN LEAD?</b>
+    ${sigHTML}
+    ${o.vac?`<div class="sig" style="background:#dfe7f5"><b>${o.vac} actuele vacature-signalen</b> — indicator voor Optie B (plaatsing in NL)</div>`:""}
+    ${["A","B"].map(k=>{const sc=k==="A"?o.score_out:o.score_nl,ts=(o.sigs||[]).filter(s=>s[0]===k),t2=ts.length?ts[0][1]:"recente ontwikkelingen in de markt";
+     return `<div class="opt"><h4>${OPTS[k].label}<span><b>${sc}</b>/100</span></h4><small style="color:var(--mut)">${OPTS[k].hint}</small>
      <div class="outreach">${OPTS[k].mail(o,t2)}</div></div>`}).join("")}
    <button class="btn" onclick="alert('Demo: opslaan naar CRM')">Markeer als contact</button></div>`;
    d.querySelector(".lead-head").onclick=()=>d.classList.toggle("open");
    list.appendChild(d);
   });
+  if(!sel.length)list.innerHTML="<p>Geen leads binnen deze filters.</p>";
  };
- document.getElementById("fOpt").onchange=paint;document.getElementById("fSeg").onchange=paint;document.getElementById("fMin").oninput=paint;paint();
+ document.getElementById("fOpt").onchange=paint;document.getElementById("fMin").oninput=paint;paint();
 }
 
 // ===== KAART =====
 function renderMap(){
- view.innerHTML=`<div class="filters"><span style="font-size:13px;color:var(--mut)">Pins gekleurd op beste optie: groen=A-dominant, blauw=B-dominant, grijs=twijfel.</span></div>
- <div id="mapwrap"><div id="map"></div><div id="panel"><p style="color:var(--mut);font-size:13px">Klik op een pin om door te klikken naar afdelingen en locaties.</p></div></div>`;
+ view.innerHTML=`<div class="filters"><span style="font-size:13px;color:var(--mut)">Alle ${DATA.length} kantoren uit de masterlijst. Groen = A-dominant (outsourcing), blauw = B-dominant (plaatsing NL), grijs = nog geen signalen. Klik op een pin voor details.</span></div>
+ <div id="mapwrap"><div id="map"></div><div id="panel"><p style="color:var(--mut);font-size:13px">Klik op een pin om kantoorinformatie te zien: overzicht, signalen en locaties.</p></div></div>`;
  if(!map){map=L.map("map").setView([52.2,5.3],7);L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",{attribution:"© OpenStreetMap"}).addTo(map);}
- setTimeout(()=>map.invalidateSize(),50);markers.forEach(m=>map.removeLayer(m));markers=[];locLayer&&(map.removeLayer(locLayer),locLayer=null);
+ setTimeout(()=>map.invalidateSize(),50);
+ markers.forEach(m=>map.removeLayer(m));markers=[];locLayer&&(map.removeLayer(locLayer),locLayer=null);
  DATA.forEach(o=>{
   const c=o.score_out-o.score_nl>=10?"#2e6b4f":o.score_nl-o.score_out>=10?"#4a6ea8":"#8a978d";
   const m=L.circleMarker([o.lat,o.lng],{radius:o.size==="groot"?13:o.size==="middelgroot"?9:6,color:"#fff",weight:2,fillColor:c,fillOpacity:.92}).addTo(map);
-  m.bindTooltip(`${o.name} — A:${o.score_out} B:${o.score_nl}`);m.on("click",()=>showOffice(o));markers.push(m);
+  m.bindTooltip(`${o.name} — A:${o.score_out} B:${o.score_nl}`);
+  m.on("click",()=>showOffice(o));markers.push(m);
  });
 }
 function showOffice(o){
  if(locLayer){map.removeLayer(locLayer);locLayer=null}
- const locs=LOCS[o.id]||[{n:o.city+" (HQ)",lat:o.lat,lng:o.lng}];
- document.getElementById("panel").innerHTML=`<h3>${o.name}</h3><p style="font-size:12px;color:var(--mut)">${o.city} · ${o.size}</p>
-  <div style="display:flex;gap:8px;margin:8px 0"><span class="chip a">A outsourcing: <b>${o.score_out}</b></span><span class="chip b">B plaatsing: <b>${o.score_nl}</b></span></div>
-  <div class="tabs"><button class="on" data-t="ov">Overzicht</button><button data-t="dp">Afdelingen</button><button data-t="lc">Locaties</button></div><div id="tabBody"></div>`;
+ const locs=LOCS[o.id]||[{n:(o.city||"onbekend")+" (HQ)",lat:o.lat,lng:o.lng}];
+ const sigHTML=(o.sigs||[]).length
+  ? o.sigs.slice(0,5).map(s=>`<div class="sig"><span class="chip ${s[0]==="A"?"a":"b"}">${s[0]}</span> ${s[1]}${s[4]?` <a href="${s[4]}" target="_blank" rel="noopener" style="font-size:11px">bron ↗</a>`:""}<br><small style="color:var(--mut)">Bron: ${s[2]}</small></div>`).join("")
+  : "<small style='color:var(--mut)'>Nog geen signalen — dit kantoor staat op de masterlijst met basis-score.</small>";
+ document.getElementById("panel").innerHTML=`<h3>${o.name}</h3><p style="font-size:12px;color:var(--mut)">${o.city||"—"} · ${o.mdw?o.mdw+" fte":"omvang onbekend"}</p>
+  <div style="display:flex;gap:8px;margin:8px 0;flex-wrap:wrap"><span class="chip a">A outsourcing: <b>${o.score_out}</b></span><span class="chip b">B plaatsing: <b>${o.score_nl}</b></span>${o.vac?`<span class="chip b">${o.vac} vacatures</span>`:""}</div>
+  <div class="tabs"><button class="on" data-t="ov">Signalen</button><button data-t="lc">Locatie</button></div><div id="tabBody"></div>`;
  const body=document.getElementById("tabBody"),tabs=document.querySelectorAll("#panel .tabs button");
  const tab=t=>{tabs.forEach(b=>b.classList.toggle("on",b.dataset.t===t));
-  if(t==="ov")body.innerHTML=(o.sigs||[]).slice(0,3).map(s=>`<div class="sig"><span class="chip ${s[0]==="A"?"a":"b"}">${s[0]}</span> ${s[1]}<br><small style="color:var(--mut)">Bron: ${s[2]}</small></div>`).join("");
-  if(t==="dp")body.innerHTML=Object.entries(o.dept||{}).map(([k,v])=>`<div class="dept"><b>${DEPT_L[k]}</b> — ±${v} mdw</div>`).join("")||"<small>Geen afdelingsdata.</small>";
+  if(t==="ov")body.innerHTML=sigHTML;
   if(t==="lc"){body.innerHTML=locs.map((l,i)=>`<div class="dept" data-i="${i}">${l.n}</div>`).join("");
    body.querySelectorAll(".dept").forEach(el=>el.onclick=()=>{const l=locs[+el.dataset.i];locLayer&&map.removeLayer(locLayer);
-    locLayer=L.marker([l.lat,l.lng]).bindPopup(`<b>${o.name}</b><br>${l.n}`).addTo(map);map.setView([l.lat,l.lng],10);});}
+    locLayer=L.marker([l.lat,l.lng]).bindPopup(`<b>${o.name}</b><br>${l.n}`).addTo(map);map.setView([l.lat,l.lng],11);});}
  };
  tabs.forEach(b=>b.onclick=()=>tab(b.dataset.t));tab("ov");
 }
 
 // ===== NETWERK =====
 function renderNet(){
- const nets={};DATA.forEach(o=>{(nets[o.group]=nets[o.group]||[]).push(o)});
- view.innerHTML=Object.entries(nets).sort((a,b)=>b[1].length-a[1].length).map(([g,ms])=>{
+ const nets={};DATA.forEach(o=>{const g=o.group||"(zelfstandig)";(nets[g]=nets[g]||[]).push(o)});
+ view.innerHTML=`<div class="demo-note">Kantoren uit de live masterlijst zijn nog niet gegroepeerd per netwerk — groepsdata kun je later per kantoor toevoegen.</div>`+
+ Object.entries(nets).sort((a,b)=>b[1].length-a[1].length).slice(0,30).map(([g,ms])=>{
   const best=Math.max(...ms.map(o=>Math.max(o.score_out,o.score_nl)));
   return `<div class="lead"><div class="lead-head" onclick="this.parentElement.classList.toggle('open')">
    <div><div class="name">${g} <span class="chip ${tier(best)}">top ${best}</span></div>
    <div class="meta">${ms.length} kantoor(en)</div></div></div>
-   <div class="lead-body">${ms.sort((a,b)=>b.score_out-a.score_out).map(o=>`<div style="display:flex;justify-content:space-between;font-size:13px;padding:4px 0"><span>${o.name} — ${o.city}</span><span><span class="chip a">${o.score_out}</span> <span class="chip b">${o.score_nl}</span></span></div>`).join("")}</div></div>`;
+   <div class="lead-body">${ms.sort((a,b)=>b.score_out-a.score_out).slice(0,15).map(o=>`<div style="display:flex;justify-content:space-between;font-size:13px;padding:4px 0"><span>${o.name} — ${o.city||""}</span><span><span class="chip a">${o.score_out}</span> <span class="chip b">${o.score_nl}</span></span></div>`).join("")}</div></div>`;
  }).join("");
 }
-render();
+
+// ===== EVENEMENTEN =====
+const BASIS=[
+{n:"Accountancy Audit Event",d:"2027-03-01",t:"conf",l:"Locatie TBC",tag:"Door jou ingesteld",url:""},
+{n:"AV-Padeltoernooi (Accountancy Vanmorgen)",d:"2026-11-26",t:"sport",l:"Utrecht",tag:"a.s. donderdag",url:"https://www.accountancyvanmorgen.nl"},
+{n:"Accountantsdag (NBA)",d:"",t:"conf",l:"Nog onbekend",tag:"2027-datum TBC",url:"https://www.nba.nl"},
+{n:"Payroll Day / Payroll Awards",d:"",t:"net",l:"Nog onbekend",tag:"Doorgaans voorjaar — TBC",url:""},
+{n:"Nationaal Congres Familiebedrijven (AV)",d:"",t:"conf",l:"Nog onbekend",tag:"Jaarlijks AV-congres — TBC",url:"https://www.accountancyvanmorgen.nl"},
+{n:"PKF-netwerkbijeenkomst",d:"",t:"net",l:"Nog onbekend",tag:"Datum TBC",url:""},
+{n:"AV-Top 50 presentatie",d:"",t:"net",l:"Nog onbekend",tag:"Jaarlijkse ranglijst — TBC",url:"https://www.accountancyvanmorgen.nl"},
+];
+const MN=["JAN","FEB","MAA","APR","MEI","JUN","JUL","AUG","SEP","OKT","NOV","DEC"];
+const EVL={conf:"Conferentie",net:"Netwerk",sport:"Sport/Netwerk",eigen:"Eigen event"};
+function ics(ev){
+ const dt=ev.d.replace(/-/g,"");
+ const end=new Date(+ev.d.slice(0,4),+ev.d.slice(5,7)-1,+ev.d.slice(8,10)+1).toISOString().slice(0,10).replace(/-/g,"");
+ const b=new Blob([`BEGIN:VCALENDAR\nVERSION:2.0\nPRODID:-//iSprout Radar//NL\nBEGIN:VEVENT\nUID:${Date.now()}@isprout\nDTSTART;VALUE=DATE:${dt}\nDTEND;VALUE=DATE:${end}\nSUMMARY:${ev.n}\nLOCATION:${ev.l}\nDESCRIPTION:iSprout Radar event — ${EVL[ev.t]}\nEND:VEVENT\nEND:VCALENDAR`],{type:"text/calendar"});
+ const a=document.createElement("a");a.href=URL.createObjectURL(b);a.download=ev.n.replace(/\W+/g,"-")+".ics";a.click();
+}
+function laadEv(){return BASIS.concat(JSON.parse(localStorage.getItem("isprout_events")||"[]"))}
+let evFilter="";
+function renderEv(){
+ view.innerHTML=`<div class="demo-note">⚠ Behalve het Audit Event (1-3-27) en het AV-padeltoernooi zijn datums nog TBC — check de organisator zodra 2027-datums gepubliceerd worden.</div>
+ <div class="filters" id="evFilters">
+  <button data-f="" class="filtbtn on">Alles</button>
+  <button data-f="conf" class="filtbtn">Conferenties</button>
+  <button data-f="net" class="filtbtn">Netwerk</button>
+  <button data-f="sport" class="filtbtn">Sport/Netwerk</button>
+  <button data-f="eigen" class="filtbtn">Mijn events</button>
+ </div>
+ <div id="evLijst"></div>
+ <form id="evFrm"><h2>+ Eigen event toevoegen</h2>
+  <input type="text" id="eNaam" placeholder="Naam van het event">
+  <input type="date" id="eDatum">
+  <input type="text" id="eLoc" placeholder="Locatie" style="width:180px">
+  <select id="eType"><option value="conf">Conferentie</option><option value="net">Netwerk</option><option value="sport">Sport/Netwerk</option></select>
+  <input type="text" id="eLink" placeholder="Website (optioneel)" style="width:220px">
+  <button class="btn" type="submit">Toevoegen</button></form>`;
+ function toon(){
+  const lijst=document.getElementById("evLijst");
+  const evs=laadEv().sort((a,b)=>(a.d||"9999")<(b.d||"9999")?-1:1).filter(e=>!evFilter||e.t===evFilter);
+  lijst.innerHTML=evs.map((e,i)=>{
+   const d=e.d?e.d.slice(8,10):"?",m=e.d?MN[+e.d.slice(5,7)-1]:"TBC";
+   return `<div class="ev"><div class="datebox ${e.d?"":"tbc"}"><div class="d">${d}</div><div class="m">${m}</div></div>
+   <div><h3>${e.n}</h3><p>${e.l}</p><span class="chip ${e.t}">${EVL[e.t]}</span> <span style="font-size:11px;color:var(--mut)">${e.tag||""}</span>${e.url?`<br><a href="${e.url}" target="_blank" rel="noopener" style="font-size:11px">website ↗</a>`:""}${e.eigen?`<br><span class="del" data-i="${i}">verwijderen</span>`:""}</div>
+   <div class="act">${e.d?`<button class="btn" onclick='ics(${JSON.stringify(e).replace(/'/g,"&#39;")})'>📅 Agenda</button>`:""}</div></div>`;
+  }).join("");
+  lijst.querySelectorAll(".del").forEach(x=>x.onclick=()=>{
+   const arr=JSON.parse(localStorage.getItem("isprout_events")||"[]");
+   arr.splice(+x.dataset.i-BASIS.length,1);localStorage.setItem("isprout_events",JSON.stringify(arr));toon();
+  });
+ }
+ document.getElementById("evFilters").querySelectorAll("button").forEach(b=>b.onclick=()=>{
+  evFilter=b.dataset.f;document.querySelectorAll("#evFilters button").forEach(x=>x.classList.remove("on"));b.classList.add("on");toon();
+ });
+ document.getElementById("evFrm").onsubmit=e=>{
+  e.preventDefault();
+  const ev={n:eNaam.value,d:eDatum.value,t:eType.value,l:eLoc.value||"—",tag:"Eigen toevoeging",url:eLink.value,eigen:true};
+  if(!ev.n||!ev.d)return alert("Naam en datum zijn verplicht");
+  const arr=JSON.parse(localStorage.getItem("isprout_events")||"[]");arr.push(ev);
+  localStorage.setItem("isprout_events",JSON.stringify(arr));evFrm.reset();toon();
+ };
+ toon();
+}
 </script>
 </body>
 </html>
