@@ -1,0 +1,329 @@
+{
+  "gegenereerd": "2026-11-23 17:48:14.164283",
+  "let_op": "Scores zijn keyword-based, geen AI. Signalen bevatten echte titels, data en links.",
+  "leads": [
+    {
+      "name": "Accon AVM",
+      "score_out": 100,
+      "score_nl": 35,
+      "signalen": [
+        {
+          "titel": "Overname Accon avm door Flynth lijkt zo goed als rond - Accountancy Vanmorgen ·",
+          "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNVW9CdXJmc3hKcm9KdzF0X3lwNnFqOHNPWUYwN3ZsajA3bm9VUk9MZ2ZNY1NyRUhpUU5OS0x2VDR3LTJBc3lyNnEtbWRldmhxOTNTNmQwekl2QjlyTEdidXFwVFV5NS1sUS1ueVcxZW81U1BNVmNjbTFXMHBTbVdGY3RHajUyeGFIWEtrMGdjMzZJUzM4azhEa0d4R0NIaWxjdTdj?oc=5",
+          "datum": "Wed, 16 Feb 2022 08:00:00 GMT",
+          "bron": "Google News",
+          "a": 0,
+          "b": 0,
+          "groei": 3
+        },
+        {
+          "titel": "Accon avm verdwijnt na overname van de markt - Accountantweek",
+          "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNQWlNRzdJbEo4UDY5dFNZbVJ5UUtuWi1zNy0wVDNQbXVNbklMOUgxMHZ4NXhfRUo3Rkl1NldRN3o2NWNUeHpqTE1STVpUeUdXaHhXZDVjenFpakowZG9sOWhuQWg0eEREYnAxaUNnelRTZDBCSUJNOXE0ZDE0LVRrakJQWk9zdw?oc=5",
+          "datum": "Mon, 11 Apr 2022 07:00:00 GMT",
+          "bron": "Google News",
+          "a": 0,
+          "b": 0,
+          "groei": 3
+        },
+        {
+          "titel": "Flynth bevestigt overname accon avm - Accountant.nl",
+          "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQRnUtbUgtZUNOdkszYUhUUDV0NFhUWDVPcGJpT0FTMDRrT0JmSXR6TVczYnM0VlZTX3dmYzlNNHNJbnJOX2VvWEJKSzg0Z05PYVZHd3QxMXNfV3JwWXhBMXBKby02VVMyeThXeFRPVXZmdkxPUDhTQWFDUHAyWXJ6Qm5R?oc=5",
+          "datum": "Fri, 18 Feb 2022 08:00:00 GMT",
+          "bron": "Google News",
+          "a": 0,
+          "b": 0,
+          "groei": 3
+        },
+        {
+          "titel": "Accon avm na boekenschandaal rijp voor overname - Accountantweek",
+          "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNMFZiV25fUEVxam11UFg4bW1XdUh6NnVsa3dvWWRHSkJ3N0NDYXpzemJIckZSbHp0SjhJbmlTaGpXZmFkRGxFb3hzcF96V2ZXdXh5SmtUbUx3QlZ4Q182dGp1RnFkeTc3Z0NuemR1YkItWDlYN2VrOHV5ckdHRU45YXFnOHhwOUdsdWc?oc=5",
+          "datum": "Fri, 24 Dec 2021 08:00:00 GMT",
+          "bron": "Google News",
+          "a": 0,
+          "b": 0,
+          "groei": 3
+        },
+        {
+          "titel": "Flynth onderzoekt mogelijke overname accon avm - Accountant.nl",
+          "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNb0dCbGJBUW80M1A3VWUyZnpBWjNVUmVhYWxuMFd6RktlU2RvRHRSclQ1Ymh3eFZmSGprdGZILW55dGY0dVczSmRhSlVUaW16Q0RncWhLSlctTEhqVnN4eFhJZTBxMEFGc3dfUTdZZmFETlh1bGJQUVhOem91SzdmOUphYkU4Z1BYdEpoQ0Z0TDRrdw?oc=5",
+          "datum": "Fri, 24 Dec 2021 08:00:00 GMT",
+          "bron": "Google News",
+          "a": 0,
+          "b": 0,
+          "groei": 3
+        },
+        {
+          "titel": "Flynth rondt overname Accon avm af - Accountancy Vanmorgen ·",
+          "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNc1VCMDNUTVFjWGxKOUlvNGxGLWxIa3JvMkFwSUhOX1YwYWkzMklsQzBLYkdhTkVJSS1vMHZNaVE0cGo5dXdHQ2tIV2hQaGh0cmgyWTJFTENsZEZhSGgtclYxSVhiLUJuUGdtcjV6VTlaOHFkWk45bW9mTW5xS0xWQkhyLTVWaDhaX2c?oc=5",
+          "datum": "Thu, 07 Apr 2022 07:00:00 GMT",
+          "bron": "Google News",
+          "a": 0,
+          "b": 0,
+          "groei": 3
+        },
+        {
+          "titel": "Flynth rondt overname audittakken Accon avm en Astrium af - Accountancy Vanmorgen ·",
+          "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQVC1ENXZkMWFMd3owRTlYMVJ0ZEdnT1FzYnRkRjFQazdRVnVuT1JKTEotTS1jN0JtcXl3Xzd1ZVFXWTRkclhpOWxGVTlfOElhdGlMc1J3MWplV2hQWGRuQlpRRGN3d2JFZ0E4TXlWVTdoX3hQMkhNR2dHMy1MQzlfZjg3R2hMY29lbzZ6Q0J1VnA?oc=5",
+          "datum": "Fri, 02 Sep 2022 07:00:00 GMT",
+          "bron": "Google News",
+          "a": 0,
+          "b": 0,
+          "groei": 3
+        }
+      ]
+    },
+    {
+      "name": "BDO Nederland",
+      "score_out": 71,
+      "score_nl": 35,
+      "signalen": [
+        {
+          "titel": "BDO boekt omzetgroei in jubileumjaar - Accountant.nl",
+          "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNaXlpZGdJUTUxdEx0bmhHbXgzX3VlcWJ1YjdMSGJoN3ROanZjcHpkMmlQMmhQZEVPdXRSU0MzSklsYzZCcTJkbm1La1dfMTF1NHc5Y1FNemFvVlFnUTRkRzBfWXZ1S3Foa3k4OVUtY0h4V1g0ZEw0dXlMYlpKRFpGU3ZhNA?oc=5",
+          "datum": "Wed, 27 May 2026 07:00:00 GMT",
+          "bron": "Google News",
+          "a": 0,
+          "b": 0,
+          "groei": 2
+        },
+        {
+          "titel": "Fusie BDO-firma's UK en Ierland start van serie deals in het netwerk - mena.nl",
+          "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQUW1RLUxnQjFkV0hJVGJjcTdoZ2RrazV5Tm9McGl4ajhNNmtTazhjSklCXy1acWwtVm4wSnJhZ090MDR2aFBTTDFWN2ROQmI3SDBZV3NhTzlKU0R5OFBnQWVlQTVGMW9PUFAxMFF3M01GanBPNl9NNHJSbXNPd0xSaFV1Qy1QS21feVpUQnl3NFJWZWE3RkcySkczeTU4c2M?oc=5",
+          "datum": "Thu, 19 Feb 2026 08:00:00 GMT",
+          "bron": "Google News",
+          "a": 0,
+          "b": 0,
+          "groei": 3
+        },
+        {
+          "titel": "Omzet van BDO groeit met 6% naar €380 miljoen - Consultancy.nl",
+          "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQNnQ5WHo0SHNsRTlwa3FrNHR2OVM5YWdHMFY1OFREeG56U01obFhoWlhRMUhZZGVMM2E1c24tVWpQaWJ5REtKbWdsYk1lVU9jXzYxOVJmMlNLX1lSR1M0eGhyb2NObXAtcm8yRlMxYVZIN0I3LTFFSHBjUHRkbTVnUEFSWllBSTJQZ2dv0gGQAUFVX3lxTE5lZTQxaHkyS2dYcXpSMl9zOFp3X3c1ZDJKOXA1MEVWVC1aUHczN0tCU25fMjdlSXEwZTZxMnMyTVQ5dFYyWmRsMGU1Yk1VcGF4aHRMMHdfQk4xX016bzQ2ZXk1aE52ZjF2aDcyWURkdUQ2MFhBZFgxZEdlTkJiOFY2VVlReHB5eE84cmdxNzEyaQ?oc=5",
+          "datum": "Tue, 03 Jun 2025 07:00:00 GMT",
+          "bron": "Google News",
+          "a": 0,
+          "b": 0,
+          "groei": 4
+        }
+      ]
+    },
+    {
+      "name": "Grant Thornton",
+      "score_out": 100,
+      "score_nl": 35,
+      "signalen": [
+        {
+          "titel": "Overname CPI verrijkt Grant Thorntons ambitie en positie in Financial Services-markt - www.grantthornton.nl",
+          "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQVEZmMUdOYjViSU1mcUJpUnpvb0RwLXl3VFNlWG9HYTZHNzBzam5kQVZWV3ltRnVibGtvcUdfZXdqTERoWkphd3BZUzZwMFhVQmhqZFhhdHpMMlpMaXRYVHdubmdkSGpja1RwMzk5NTUzamhoUWZCUkUtSllLVEJyRGtTQVVSR24ybW5zZjV0d1V2bG9uQS1lMnpia1VIQ3J5R3JrVWdaUHlia2NveXB3WGZLa0Z5bUlZWExNNnEzLWhKY3dzQ0hR?oc=5",
+          "datum": "Mon, 30 Mar 2026 07:00:00 GMT",
+          "bron": "Google News",
+          "a": 0,
+          "b": 0,
+          "groei": 3
+        },
+        {
+          "titel": "Grant Thornton Nederland realiseert 4,8% omzetgroei in jaar vol vernieuwing - www.grantthornton.nl",
+          "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPeFc2WnFZcUVkZ1FtQlY0TTUza1NPc3lJQmJaN3dWQkVQVl9sVHF5VDRvWkIwQXNKemZncksyZ3lMeVh2ZXBJeHRDRmlTYzYtUzFBeHlYNjZDVm04VzVRWkQ4aGNXYnB6Y1dUYmw1UkVjZzZUbkZoZGJ6NmNpbFIxRFNMbGhhRXFaMUZyM1NhNVF0bUJiTGtSYVp5anI2M2dIMGE0Wld2cGlBMExNYThxUHZVUno?oc=5",
+          "datum": "Wed, 29 Jul 2026 07:00:00 GMT",
+          "bron": "Google News",
+          "a": 0,
+          "b": 0,
+          "groei": 2
+        },
+        {
+          "titel": "Grant Thornton nadert big four door overname CBIZ - Accountant.nl",
+          "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOSk9FTW5HNW9oRGtmdWx3UHNrTDgtWGpPODJ4d3ZsLXdmdTlSMEV3ay1qTC1VZ2dvOW5jN2JEeUxNbll4cUJETEVQQjVyVHRoeDRtZDIzOEJnMzBIcnRrZUFsVDlud3hlS01RcWEzdkFUZVgwUk00N3BJdHFEdW43bkxQODY2YnBsSE1vZEtfTENUOFRS?oc=5",
+          "datum": "Fri, 31 Jul 2026 07:00:00 GMT",
+          "bron": "Google News",
+          "a": 0,
+          "b": 0,
+          "groei": 3
+        },
+        {
+          "titel": "Grant Thornton rondt overname CBIZ af - Accountancy Vanmorgen ·",
+          "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPTHRoWC1NM2Q0TnV6ZkRpcHcxbEV1bXZwaTJMMW9VLU1Yd2FZeTFTWjhtZk56Ul9zSUF5U1duck5sZVF5Q1E0aEw2cFU3c28tekVsOGNvS25IYldpdXVaQmVYTlhqU3QyOF83U1o3dldzWkRHWTkzWnVyZzM2Tnp0ZU1kckxSYUpSQnhpOVhn?oc=5",
+          "datum": "Wed, 04 Nov 2026 08:00:00 GMT",
+          "bron": "Google News",
+          "a": 0,
+          "b": 0,
+          "groei": 3
+        },
+        {
+          "titel": "Grant Thornton bereikt akkoord over overname CBIZ voor 5 miljard dollar - Accountancy Vanmorgen ·",
+          "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQbTNvR0FocmxyNWFWbjFwa0pqRlVTQW8xU2Q0S1ZtaU1qUjRyQkQzc3pKcDBaSUp0TFYzTy1YTlFldkJrSno4SDRXdzZWWTBBNEFWbHZnQnAtbERuUmZHNW1waXNmMk5FYTlHSXN4U1lhOTVqZTBpVV93eFpkSjllVWNSOTljRkktcy1oczFzN2lIWVo0aktxOWU3QUVmOWQyNnZEY0J3bDJyb25iZmNsYlVoQjdUUThoUTdV?oc=5",
+          "datum": "Thu, 30 Jul 2026 07:00:00 GMT",
+          "bron": "Google News",
+          "a": 0,
+          "b": 0,
+          "groei": 3
+        },
+        {
+          "titel": "Grant Thornton zet grote stap in consultancyambities met overname van CPI - Consultancy.nl",
+          "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQYnNETHNQc1hfaWJCWTdVLVVMSC03M3lhZEFwcGhfT1h6clRCa1Nhd2JCTTlvd0UzVWsyTVpvUUxIUndCNTJ6LVRlbjdEYjBUN0RIU2dkY0RRcWVnUlJCRFUzQWtyY1dRcmRtQ0oyMHBVcmVXNDJ0VEZrenA0QlN1cXIxRE1UZE44WVFSR0NDaU9rLWpUN2U2SjROX1UyVGRWOEVqMkJJX1RlVWhiZUtlcWRDUdIBuAFBVV95cUxQYVhpeHpOMV8tZkFnVVVOTWJiM0Qwd3Q0aDhJMk1hSlpWTHlQc0dENXlfVmswTHY5SnFIWlVmSjEwM090QmgyTXBFZ0ZucGdOdUVubjZ3RlREOWw4dTlvYU1pSDJvbXBMMFBZQU03aVVBR3pwLTMyYXVQSTdEVUdEZEktX3l1WGl0YnRjdTBJZkJvV29xb3JqRkFyM2NZLW9wSEx1YWxhb2tlRjhmQnpMX2dVQzNIVk5G?oc=5",
+          "datum": "Tue, 31 Mar 2026 07:00:00 GMT",
+          "bron": "Google News",
+          "a": 0,
+          "b": 0,
+          "groei": 3
+        },
+        {
+          "titel": "Tekort aan tech-talent remt groei van technologiebedrijven - Grant Thornton",
+          "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQWTAyMlBlT3dLa0xDWmRhdVpjLU1IZFNBMEI4Y3d5QjFGRlRwdFBDODluaDFhSWE2b05FNF8xTU1KcmF6SEFjY29RamtXWTZLblZqY0dJVGs1ejJBcG1RWFl1MjNrOHc1OTRxSHZYZXg4c2g3LWd0UXE0NXRFS3BRbTZlMVc5X1pTQzVzazJRaEMtcF82MzdCQVN0ckpLNVZSUmRrMlJLQlVkUms?oc=5",
+          "datum": "Thu, 24 Sep 2026 07:00:00 GMT",
+          "bron": "Google News",
+          "a": 0,
+          "b": 0,
+          "groei": 2
+        },
+        {
+          "titel": "Grant Thornton versterkt positie in Financial Services met overname CPI - MenA.nl",
+          "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPWXFfZFQ5SFdTa2NFeHp4Y1lWTDRhTElGdVVJZEpTNHJzaUtmb0JzLXdsYWJ3anVFWHU1dnJfV2NZdG9YQkJPZ3cwdjVHQnl0YmJQRnhBNTdiaTQxc05IbzhraWllTXBpSE9UeHZPQlljUmlYcjR1YklDemd5Rkg0ektYT1gyc2hZRmdIcHo2R0g1dGlySVgxTHJycDhLYmtnLTFDZFR4Tjg?oc=5",
+          "datum": "Mon, 30 Mar 2026 07:00:00 GMT",
+          "bron": "Google News",
+          "a": 0,
+          "b": 0,
+          "groei": 3
+        }
+      ]
+    },
+    {
+      "name": "Baker Tilly",
+      "score_out": 87,
+      "score_nl": 35,
+      "signalen": [
+        {
+          "titel": "Baker Tilly lonkt naar top 10-positie met overname Baat - Accountancy Vanmorgen ·",
+          "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNR2pyRXFoSnk1THBkN2lDNUNUaHc1Q2F1a2JnbU5KUXgwanJ3Rjd3VEJvVVBIRldfeWhOVGVvbVhzUGVqcnZKLWVzN2FycVo3MWxCT1NjMkNFbnM2aGdyTEV3bU5qTm8yUVFTaXpEdV9ycEdlaXpuTDZjUmNCYzE2UG9OZnJfM3dMSnk2aF9FdzhLdzdtMTFpc2oyZFg4N1dHUHpvbU1n?oc=5",
+          "datum": "Mon, 06 Jul 2026 07:00:00 GMT",
+          "bron": "Google News",
+          "a": 0,
+          "b": 0,
+          "groei": 3
+        },
+        {
+          "titel": "Omzetgroei Baker Tilly - Accountant.nl",
+          "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBHRkhCRkd0bjFtRzNCUU5Lb25lTFUxVEI3M21JUW9wSlhfMzhkZzhNN1ZaWWpieFpZdUZBMng0VmxGa0c4MkxYQzVwbWNsT2Eydzk2X3o5Y3dVcHk4QnRMaUgwSnVNUUsxWTlhS2YyVW8?oc=5",
+          "datum": "Thu, 28 May 2026 07:00:00 GMT",
+          "bron": "Google News",
+          "a": 0,
+          "b": 0,
+          "groei": 2
+        },
+        {
+          "titel": "Baker Tilly jaagt op groei, terwijl personeelsverloop toeneemt - Accountancy Vanmorgen ·",
+          "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxQUF9tNy1CYnk3VEdJWlRmZHZzZ20yUFpiaTdRS1E1ZXZkZGNZUWJxUjQ5SzllSHg3ZG9STDJjZ0dtdmZKWGhWcHVSVTZYM09veERSZ0VFd2Z2Y0FnZDNrWHFrYXpyU2RFSlloWDRPbF9SRVhHbTdqeTgwMXEzMTJBX1g3NmJnemp5cVpnYk10NUtWVVpCUGF4MFotSURmMjk5NDVBT0x3VFF6VUpTV3YxQlpHY1RxTkR4Wl9LeTJOYU8wNllRRjhCU3pDbU5xQQ?oc=5",
+          "datum": "Thu, 28 May 2026 07:00:00 GMT",
+          "bron": "Google News",
+          "a": 0,
+          "b": 0,
+          "groei": 2
+        },
+        {
+          "titel": "Baker Tilly International groeit met meer dan 21 procent - Accountantweek",
+          "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPRk40X2h4NklXOEVHQWlYRVJyNnBzSDBtZXZWSTAzb0ZZX2I4YlhQSjRGYnpXblpRZzYyTzhhMGQwSkJoTGE0aG1KMkdlUklUci0zaXZWQXl3UlVMeUp5cl90LTFyRk1fQmkydnBvVGFzdkkxendxV1ZCTThpMkJLYWdVZUlJWUNQMnBHbU1ZSlZ2ZnBxTWc?oc=5",
+          "datum": "Thu, 15 Jan 2026 08:00:00 GMT",
+          "bron": "Google News",
+          "a": 0,
+          "b": 0,
+          "groei": 4
+        },
+        {
+          "titel": "Baker Tilly gaat nieuw groeihoofdstuk in met investeerder Inflexion - Consultancy.nl",
+          "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPQU8xOUhJQ1oydThLY0I5VzdYNXptTExvU2RES1UyYmtVMW9JX0RlVUNlcGNaVkFjZXRSX3Nabld6TW1wUHptVU1GZW5RMDFUMm4tZFAyTXMzOHg3Ykg0WDBNZHhpV1VjVElNbHpBM05mUzhDbGJ2ZlpzQnB0Vkx1OWc0eVZtLS1nb1hsWkVMNl84di05LWNsWFpUcUVvVWpZdkNhX1RKYlNKOXfSAbABQVVfeXFMUHVCR1ZwYmx1Vl9tbUtMSWVtTVRMR0puNlZrTU0xalctbTlWX0FBYnNjcENhRm14d05ZZ2dCZUJOdmxQUTVCVTdFNzc5VEo1RDcyb1Vza21FT2VlZUtTcFRCZkliakxHWjNRV29mcnF1WkFRR2NKVW1FUzRDY0pGeVlYYjZDZWd2a0gxTFBxVXI4YWFwZTRwU1IyRWJ4VEV0ZVk4UzVWLUlwOGZOazNlQ0U?oc=5",
+          "datum": "Fri, 24 Jan 2025 08:00:00 GMT",
+          "bron": "Google News",
+          "a": 0,
+          "b": 0,
+          "groei": 2
+        }
+      ]
+    },
+    {
+      "name": "Deloitte Nederland",
+      "score_out": 100,
+      "score_nl": 35,
+      "signalen": [
+        {
+          "titel": "Deloitte Nederland realiseert stabiele groei - Deloitte",
+          "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxNWW5QU2pUQVQ2Mm0wUVliQ0hEWFBpRzJjWXdkdHhXd18zZGZQYkliQWF0aVRRRjMxVkR4RTFYNl81NGlheE16MnZxUVNMRHZkazhZS01CTE8yRDk3bE5lYmJNcmVzajJ1UWkxRWsxVGk4aHNINHhJc0JyMW9LWHFubUpFNmFoSWxjei0yUjVrLVhHYVVpZkdEa3FRWlZBUQ?oc=5",
+          "datum": "Thu, 17 Sep 2026 07:00:00 GMT",
+          "bron": "Google News",
+          "a": 0,
+          "b": 0,
+          "groei": 2
+        },
+        {
+          "titel": "Deloitte groeit wereldwijd naar $ 74,5 miljard, groei technologieadvies vertraagt - Accountancy Vanmorgen ·",
+          "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOV2dLcGswcEx3cnFUbW5XT1duV2VmNlp1enhkbm9rVnItQ3Jmd1R2anRka0VPTnRVd0QtWUtfb21fcVFQNTdZYXV5dUNfWTRHbmxpOThXZnRrekpiQmYzNmxUUjllUTlDZVZqcWlLR1F1V0tZY3pjQzVFZHQ5UTVaYVh6bU5UdHN1VTZOSFNRVHBXcDVubDhPUjgyWW10LTh3c1BraUVXNExyekNhZHhtLTQ3S2F6MkgwcGwxcU56cHdhWDQ?oc=5",
+          "datum": "Fri, 25 Sep 2026 07:00:00 GMT",
+          "bron": "Google News",
+          "a": 0,
+          "b": 0,
+          "groei": 4
+        },
+        {
+          "titel": "Deloitte Nederland realiseert stabiele groei - Dutch IT Channel",
+          "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxORi1hLXYtNlJFX3psZVpZN2tyai1fa0RKbndoZHBJSUdpSGx1QUNOd2h6bHFpbHdlWXktcE1QWUNLeXNVem80TWEwcUx1OUpkZElRSjEwbHZSdjJqQUFVM3VpbHFJVEJ2Y00teGZoSEZyUnRaUTlyV0JIU05UV1Y3TGJDQ1NPejFsZUYwLVFlZw?oc=5",
+          "datum": "Mon, 12 Oct 2026 15:23:34 GMT",
+          "bron": "Google News",
+          "a": 0,
+          "b": 0,
+          "groei": 2
+        },
+        {
+          "titel": "Deloitte groeit licht, personeelsbestand krimpt - Accountant.nl",
+          "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQYWdzVWp5X0xhYi1peTl0NFFlY0p4dEFJa2tjdU5ZeUUwSEI4ejNuVC1udzVOMzBzTmltWlVDXzVya1dSaE5EbGN3ZTBUR3BLM2tXLUZ1am5RYmZGb2pUY253VEJLYkJ4QV81RzdnSjdNLTVqN0hXbUFYX1RkWGdKN1pSWDkxaDNjRWtNNFZVamE?oc=5",
+          "datum": "Thu, 17 Sep 2026 07:00:00 GMT",
+          "bron": "Google News",
+          "a": 0,
+          "b": 0,
+          "groei": 4
+        },
+        {
+          "titel": "Deloitte neemt na jaren van groei fors minder afgestudeerden aan - Het Financieele Dagblad",
+          "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQdVJOb2tRWGJ2RmtCZnFwOFJ4WlpTWjFhRVJneTRmZjJnZVZXRXdRWHIzdVRFWF9WTy14TWxkVzM1b251YlF1bFZtZVZCQjB3VjY2NFZoV0pHY3Q5cGhETHN1NGxYSVpiRFlxTTFXNXZfcVRFX296R1d2MVpOeUlWZTQ2QXJ1em9ELVQxODFsaDl6cy0xYlVjSEVUZ3RtSFMzNmc?oc=5",
+          "datum": "Mon, 15 Sep 2025 07:00:00 GMT",
+          "bron": "Google News",
+          "a": 0,
+          "b": 0,
+          "groei": 2
+        },
+        {
+          "titel": "Integratie na de fusie of overname (Post-Merger Integratie) - Deloitte",
+          "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOZFhQU0N3ZEU2Qm0zbERPWlhxVVJZSndpYW5VeUNQZTMyTDNJMkhNU054bHBoNkQ0cFlxQ0tseDVGbTVfYkhPMTQ0U0pWOC1qbmV4RkVEQjNOT2VCRnhNRXZycjcxcUdUX2RPcXU3T0Z3YXRQMDZkNXltY28yTDRqSEdBS3lzc29CVnNySTJCNFc?oc=5",
+          "datum": "Thu, 06 Nov 2025 08:00:00 GMT",
+          "bron": "Google News",
+          "a": 0,
+          "b": 0,
+          "groei": 6
+        },
+        {
+          "titel": "Deloitte neemt na jaren van groei fors minder afgestudeerden aan - Taxlive",
+          "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNbjZCOU5kV21YZnRESWtob2lYbnByVVVEaXVhcThRSmJXbG1hekxTV0Y2QTdaRFRpd1A4WDNSX2Y5T3BjOHY0SmItaVVZNDVjeDc4U3FxYml2cG9WWE51V1VFQklkckloeG9xTXd1QWVPTF9Pb3ZQTXdHYjBXU1N1b01EdHJwb1l3NWNWek1PalU5aE4tNVBIQXJQdlBielZvRUxoNk5kelhiQjJGZlE?oc=5",
+          "datum": "Mon, 15 Sep 2025 11:44:53 GMT",
+          "bron": "Google News",
+          "a": 0,
+          "b": 0,
+          "groei": 2
+        },
+        {
+          "titel": "Omzet Deloitte Nederland groeit, aantal medewerkers daalt - Accountant.nl",
+          "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxPbS1reHh6X1pheG5iQ2F2bWFtbGxxZTVCRDVaVFo1cVQzMEJXYUc1V0dMRmVwMFlwT2F1dlJ3U19aSkVtbnduYVFZSk9GSlpZWDR2aGtKRGR2T0NFVU5FNFZZd0I5SE1LUFZTanR3WTZoOHdYT2owS1VwOE5BOWVtcEZiaUwyMld3dmcxZlVBRFdMemhrNHdZVERzamJWdw?oc=5",
+          "datum": "Mon, 15 Sep 2025 07:00:00 GMT",
+          "bron": "Google News",
+          "a": 0,
+          "b": 0,
+          "groei": 4
+        },
+        {
+          "titel": "Bescheiden groei Deloitte, onderzoek examenfraude heeft grote impact - Accountancy Vanmorgen ·",
+          "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPWHU4d24wUG8wTGZsdVgtRjN6azdRaTUyMHYyOGowbnJGYkd0NXRLak92M0cxSkc1OVpIWWZsSkw5ejF3aTV0UTJKX20tNjhkeGFaeHV5QVpvNTRnS1B4cWJqbGVMMnFsSTZfZ0xMeEI5R1B5dnN0Wks3V0tGbm9DSTZrX1dWTElaR29tUmdFVXAySXp0WGVjcFBEZXhsSlRUdURvNHZWV0ZRZ2F1NS1QLUdn?oc=5",
+          "datum": "Mon, 09 Sep 2024 07:00:00 GMT",
+          "bron": "Google News",
+          "a": 0,
+          "b": 0,
+          "groei": 2
+        }
+      ]
+    }
+  ]
+}
