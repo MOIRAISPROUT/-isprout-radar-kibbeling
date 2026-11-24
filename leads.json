@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-24 08:09:34.143803",
+ "gegenereerd": "2026-11-24 10:25:27.210562",
  "bron": "Masterlijst-CSV (Big 4 + AV-Top 50) + Google News (+vacatures) + accountant.nl + AFM",
  "let_op": "Scores zijn keyword-based, geen AI. Signalen bevatten echte titels, datums en links.",
  "leads": [
@@ -193,10 +193,20 @@
    "omzet": 105.3,
    "internationaal": false,
    "eigenaar": "Mo",
-   "score_out": 30,
+   "score_out": 54,
    "score_nl": 30,
    "vacatures": 0,
-   "signalen": []
+   "signalen": [
+    {
+     "titel": "Fusies en overnames | \"Er gebeurt op dit moment heel erg veel bij ETL\" - Accountancy Vanmorgen ·",
+     "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNcnc0NE96bzFrQ0lPbnlXVmU1REQ0WU1aTGQ0QW9rVVlIakM3OU0xenB5eXZSd2lxR3JxcmlzdW5GQW0yajBOc21ldWEzcGRodGJmanVhN1Y0T1FINjh1WEQ5QTY2X3V6NHFUSEtxRWMyZnAwaWZBRVZxMmFodngtS3VMbWRGVThUbjh2d1dqQjJhYzdHS05CMUJZZTNwMDh4cHZBWHM4b3VkX3RtaUp4RW05OXc?oc=5",
+     "datum": "Wed, 15 May 2024 07:00:00 GMT",
+     "bron": "Google News",
+     "a": 0,
+     "b": 0,
+     "groei": 6
+    }
+   ]
   },
   {
    "name": "Moore MKW Audit B.V.",
@@ -950,10 +960,20 @@
    "omzet": null,
    "internationaal": true,
    "eigenaar": "",
-   "score_out": 30,
+   "score_out": 54,
    "score_nl": 38,
    "vacatures": 0,
-   "signalen": []
+   "signalen": [
+    {
+     "titel": "Fusies en overnames in de accountancy: Gebrek aan opvolging grote aanjager - Accountantweek",
+     "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNM08tcU1OTWNQQkx0N2VEcUtDTTZxZVFxNV95WFNGeTZRY1VXLXllbmt0QmF0cjZmd0YwQzE2MWRDUXdQWFR6XzBFVnF3MmxIUE4xLVVtMEZrb0F2ejRtcU9lZE1ab0lWNUlqTDRwenhscmZVcVNybmpGSVpFSENkR3Y3M3E1bks0WTBsZWNab2pRMTRKYkt1TmZzM3ktSVcwSHRwbF9INHRhTDdB?oc=5",
+     "datum": "Wed, 25 Apr 2018 07:00:00 GMT",
+     "bron": "Google News",
+     "a": 0,
+     "b": 0,
+     "groei": 6
+    }
+   ]
   },
   {
    "name": "Auren Audit & Assurance Amsterdam B.V.",
@@ -1393,10 +1413,20 @@
    "omzet": null,
    "internationaal": false,
    "eigenaar": "",
-   "score_out": 30,
+   "score_out": 42,
    "score_nl": 30,
    "vacatures": 0,
-   "signalen": []
+   "signalen": [
+    {
+     "titel": "Overname Bakker & Bakker versterkt regionale ambitie Adbeco Accountants - Accountantweek",
+     "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQdVNueFAxUmNFTHM0MFR2Tnk0enV4UWxHS0wyU0JrNzNLTUliTHFXRDItWHZzN2QzelhFWWMwYkNzVjNjWjdpaElJNWxiY1l6M3h3TWRyQjhVeGlEVWotc3ZEWFpJMGJpa1dKSXhzS2RKeEdaY1RKTUhSOTFSUkdsNUVpTnRUUktPZkdEdUFacGJIWGJJZHNF?oc=5",
+     "datum": "Wed, 27 Nov 2024 08:00:00 GMT",
+     "bron": "Google News",
+     "a": 0,
+     "b": 0,
+     "groei": 3
+    }
+   ]
   },
   {
    "name": "Baran Audit & Assurance Services B.V.",
