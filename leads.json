@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-25 06:29:42.472823",
+ "gegenereerd": "2026-11-26 06:26:12.872800",
  "bron": "Masterlijst-CSV (Big 4 + AV-Top 50) + Google News (+vacatures) + accountant.nl + AFM",
  "let_op": "Scores zijn keyword-based, geen AI. Signalen bevatten echte titels, datums en links.",
  "leads": [
@@ -472,7 +472,7 @@
    "omzet": 46.1,
    "internationaal": false,
    "eigenaar": "Tom",
-   "score_out": 90,
+   "score_out": 78,
    "score_nl": 30,
    "vacatures": 0,
    "signalen": [
@@ -495,27 +495,18 @@
      "groei": 3
     },
     {
-     "titel": "De Jong & Laan doet met CROP grootste overname tot dusver - Accountant.nl",
-     "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxPUTFPY0NGMWVyQk4tZlZXSTJTVWgxNkpfSko2U1lwcjJ0Smt0YzVfdnlWNXBCOFNnNmliQWFReXUwZmRNckxVOEhWb0h2VkFldGxUcWpjb05uU0UwODQ0ZGM3ejVET3FSSU9uazNZNWpTRHk2aFlmNDA4T0x1SHl0U3dpTVlMZXRUSU5taGlZMHc2SjdHczZkNUIydUdMUQ?oc=5",
-     "datum": "Tue, 12 May 2026 07:00:00 GMT",
-     "bron": "Google News",
-     "a": 0,
-     "b": 0,
-     "groei": 3
-    },
-    {
-     "titel": "De Jong & Laan realiseert met CROP overname nummer negen - MenA.nl",
-     "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNNHBqTUl6SHdsWDl3aWYyX3lDaHZBN3Z1M005ZWNRZ0xUczFLS2J0UlMyR0pNZzNYT1NUd3gzaDV1VG8zQURDLTVfMDJ2VkRCZHA3OWYxdFRLSlFPQWlnTDRuelpxUWdGWU1PYlhxWm5WQUh1RGJ4SFNtVnZSX01Rc2xZOWxNakcyU1EwdW5jQ05xME5uUWVuYjJfcFpBd3F6TVNUNFFzNA?oc=5",
-     "datum": "Wed, 13 May 2026 07:00:00 GMT",
-     "bron": "Google News",
-     "a": 0,
-     "b": 0,
-     "groei": 3
-    },
-    {
      "titel": "De Jong & Laan kondigt overname aan van branchegenoot CROP - Consultancy.nl",
      "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNUG1KVERCcjgxa2dlRzJJNnFEYnlXaTh5RkZTSlFWRUphLW1qNEI5MElOTG9Rb251eHVCdzR1aVY0ZFZzTGtPM1VmRXo5d202cC1rd0NDbVZpRnExT084Q3JaRFBWNmhfdk9tR0VBSWE0bko5ZWh4ek5DYlhwV3otVWFUcS1wcGk3ay11TTRCR1RpLURjNnRQTkxxbEvSAaIBQVVfeXFMUGs4UkdYeU1GZnRHcW0zYXRQOHlEQ3BuZXU4QmlIUXY3a2tnQVZGNWRacGpNaW9aTUVYRjh2RENrYXQ3dHJRb0x2dmFqYjFDQVprczdxMWkzSWZIYS1HR1UxY01SMTJPMU5NOVhHQ3lCQVhwWWFUZjczeHNmX0pDQnFDeTRKdzJXenREYzhCTmN5WTY3N1RVVWpBU2dJRWlyakpR?oc=5",
      "datum": "Wed, 13 May 2026 07:00:00 GMT",
+     "bron": "Google News",
+     "a": 0,
+     "b": 0,
+     "groei": 3
+    },
+    {
+     "titel": "De Jong & Laan doet met CROP grootste overname tot dusver - Accountant.nl",
+     "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxPUTFPY0NGMWVyQk4tZlZXSTJTVWgxNkpfSko2U1lwcjJ0Smt0YzVfdnlWNXBCOFNnNmliQWFReXUwZmRNckxVOEhWb0h2VkFldGxUcWpjb05uU0UwODQ0ZGM3ejVET3FSSU9uazNZNWpTRHk2aFlmNDA4T0x1SHl0U3dpTVlMZXRUSU5taGlZMHc2SjdHczZkNUIydUdMUQ?oc=5",
+     "datum": "Tue, 12 May 2026 07:00:00 GMT",
      "bron": "Google News",
      "a": 0,
      "b": 0,
@@ -995,10 +986,20 @@
    "omzet": null,
    "internationaal": true,
    "eigenaar": "",
-   "score_out": 30,
+   "score_out": 54,
    "score_nl": 38,
    "vacatures": 0,
-   "signalen": []
+   "signalen": [
+    {
+     "titel": "Fusies en overnames in de accountancy: Gebrek aan opvolging grote aanjager - Accountantweek",
+     "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNM08tcU1OTWNQQkx0N2VEcUtDTTZxZVFxNV95WFNGeTZRY1VXLXllbmt0QmF0cjZmd0YwQzE2MWRDUXdQWFR6XzBFVnF3MmxIUE4xLVVtMEZrb0F2ejRtcU9lZE1ab0lWNUlqTDRwenhscmZVcVNybmpGSVpFSENkR3Y3M3E1bks0WTBsZWNab2pRMTRKYkt1TmZzM3ktSVcwSHRwbF9INHRhTDdB?oc=5",
+     "datum": "Wed, 25 Apr 2018 07:00:00 GMT",
+     "bron": "Google News",
+     "a": 0,
+     "b": 0,
+     "groei": 6
+    }
+   ]
   },
   {
    "name": "HLB Den Hartog Accountants & Consultants",
