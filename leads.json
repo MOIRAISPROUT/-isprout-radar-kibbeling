@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-27 06:04:12.765603",
+ "gegenereerd": "2026-11-28 06:21:19.567705",
  "bron": "Masterlijst-CSV (Big 4 + AV-Top 50) + Google News (+vacatures) + accountant.nl + AFM",
  "let_op": "Scores zijn keyword-based, geen AI. Signalen bevatten echte titels, datums en links.",
  "leads": [
@@ -73,10 +73,20 @@
    "omzet": 379.9,
    "internationaal": true,
    "eigenaar": "",
-   "score_out": 30,
+   "score_out": 38,
    "score_nl": 38,
    "vacatures": 0,
-   "signalen": []
+   "signalen": [
+    {
+     "titel": "BDO boekt omzetgroei in jubileumjaar - Accountant.nl",
+     "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNaXlpZGdJUTUxdEx0bmhHbXgzX3VlcWJ1YjdMSGJoN3ROanZjcHpkMmlQMmhQZEVPdXRSU0MzSklsYzZCcTJkbm1La1dfMTF1NHc5Y1FNemFvVlFnUTRkRzBfWXZ1S3Foa3k4OVUtY0h4V1g0ZEw0dXlMYlpKRFpGU3ZhNA?oc=5",
+     "datum": "Wed, 27 May 2026 07:00:00 GMT",
+     "bron": "Google News",
+     "a": 0,
+     "b": 0,
+     "groei": 2
+    }
+   ]
   },
   {
    "name": "Moore DRV Audit B.V.",
@@ -248,10 +258,20 @@
    "omzet": 91.6,
    "internationaal": true,
    "eigenaar": "Mo",
-   "score_out": 30,
+   "score_out": 46,
    "score_nl": 38,
    "vacatures": 0,
-   "signalen": []
+   "signalen": [
+    {
+     "titel": "Persbericht Crowe groeit door | Crowe Netherlands - Crowe",
+     "link": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxPblczVEdjeEV5YkU5anNpY2JZT01CWXVQYy1QTF9aMzF6Njh5M3A1MGdYQ2ZzRGQ2cHBDQnladzRrWmNDY1dLRzZPQW9MQWlYM3VaQkZMaGpUTW5UbFk5TkN1LXlRUlZxZWpPSHNrbzBOZjlWdERvLVJYRGlWckJYb2JOQm12U0ZkSXpaWUQ3eDB2cE16TnpnZF8ySWl1T2tidGVSSXhYckZKS2hGU1VyaUMybmlZNkNqT0hDZHNYYXlOYVM3d1BqdzhqQjVUMjRoQy1FbnkzZHk?oc=5",
+     "datum": "Mon, 02 Mar 2026 08:00:00 GMT",
+     "bron": "Google News",
+     "a": 0,
+     "b": 0,
+     "groei": 4
+    }
+   ]
   },
   {
    "name": "Borrie Audit B.V.",
@@ -278,7 +298,7 @@
    "omzet": 89.6,
    "internationaal": false,
    "eigenaar": "Tom",
-   "score_out": 70,
+   "score_out": 42,
    "score_nl": 30,
    "vacatures": 0,
    "signalen": [
@@ -290,15 +310,6 @@
      "a": 0,
      "b": 0,
      "groei": 3
-    },
-    {
-     "titel": "PIA Group groeit verder na overname van Kaap Hoorn - Accountancy Vanmorgen ·",
-     "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQRFlON3NEZE9MQnVENmU0SHRIZU9LYlZCQVRDQ0h0V1ZjZWpLUzNTYTFkVk92M2FBZUNHY0plSDliaTBBSy1tTzU5UGV1cHFOVE5yMU1Hc19VN1F6djd5MC1NUk9IUFlneGVLMzJFTWlqOXVmRm5JWVROVjBjc09HcHVuSGp6Yzd6LWI4UFZGS0dqZEw5TENrYWw4QnE5RHc?oc=5",
-     "datum": "Thu, 20 Jun 2024 07:00:00 GMT",
-     "bron": "Google News",
-     "a": 0,
-     "b": 0,
-     "groei": 7
     }
    ]
   },
@@ -312,19 +323,10 @@
    "omzet": 89.6,
    "internationaal": false,
    "eigenaar": "Tom",
-   "score_out": 50,
+   "score_out": 38,
    "score_nl": 30,
    "vacatures": 0,
    "signalen": [
-    {
-     "titel": "Na 75 jaar kiest Steens & Partners voor overname door PIA - Accountantweek",
-     "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxON2hUWXBBWWZuaEdISDVUX1Fsc0lqeEZ0akNSS3p1cHNFQ1ZQcXNvNDVzU0R1SDQ0LUo5Q3JlUnRhbFA3RHNPUXdCdy1TVVd4Smh6VGgyMXh3LW9ZNmhfWEZQeXlfbUt3cDByb3hobE85WlNKNlFBekc5RkFBUk12SmlJSjhIRzBzb1NtZHJ0NGZzWVp2?oc=5",
-     "datum": "Wed, 04 Sep 2024 07:00:00 GMT",
-     "bron": "Google News",
-     "a": 0,
-     "b": 0,
-     "groei": 3
-    },
     {
      "titel": "Jan Steen groeide op in een welvarend en kunstzinnig Leiden - Historiek",
      "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE0zZC1GWTVlbXJLNXhnWE9VMHdJVHZmMDVtd0VuMFo4SFhiUWNOUVhmRHY5cnRnN0pLWi01dlVfTm5zaGdQX2xJT0x3eE1UcENwOG4tOFV5cFVRTUJKR0x2S1o3NHdTa19Yckx6a1gxcTNOa0k?oc=5",
@@ -406,18 +408,18 @@
    "omzet": 59.9,
    "internationaal": false,
    "eigenaar": "Tom",
-   "score_out": 46,
+   "score_out": 38,
    "score_nl": 30,
    "vacatures": 0,
    "signalen": [
     {
-     "titel": "Visser ’t Hooft Lyceum groeit uit huidige gebouwen: politiek steunt miljoenenverbouwing - Allesoverkatwijk.nl",
-     "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQRDFvMVVaVWFRQ3hHS0F2UGZFZUU3dE9MODNRTktwMUFjam5QdEtCTDdvbU51cHZsQnJjZ1J6WlhRXzVwcEtoWFJ0bGVpUlhwT2YxTGlIMzA0SXFHS3Rvc0JodGJIMFhDR0tZV3NManc3WmU3TmQ2Y21rY3FwQk5tTjd1SFVreWFpYkxuMF95eW1vV3pxaVU2TzRrQ1ZycHEzNnJHVUN3S1ZZUl82ZEZiQzRxa05RWEk?oc=5",
-     "datum": "Tue, 24 Nov 2026 18:15:00 GMT",
+     "titel": "AV-Top 50 | Visser & Visser kiest voor een autonoom groeipad in de Top 50 - Accountancy Vanmorgen ·",
+     "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNcDQzbFQweVY5T1JhMG1tVmE3c0h6bFNxWk9MNFpaejBXazFaQ0Y1WWNLNldCRmFEZWdsVXVqME1rVFhkdnYxMEs0LW5iY0RjbncwYzBaSzlrV3hKVHBZRDRZa1VkMEk3Y0pHd1FEOGZLYk96OEwzQncyZFFRMjJzMGVZd1NzYTRYNHc1OWVoeEVxUmVNTVl2U05zMW5USlZpaXVLQ2lMRF9VMV9HOGplUDBjVGV2TXd3?oc=5",
+     "datum": "Thu, 26 Nov 2026 11:50:17 GMT",
      "bron": "Google News",
      "a": 0,
      "b": 0,
-     "groei": 4
+     "groei": 2
     }
    ]
   },
@@ -461,7 +463,7 @@
    "omzet": 46.1,
    "internationaal": false,
    "eigenaar": "Tom",
-   "score_out": 90,
+   "score_out": 66,
    "score_nl": 30,
    "vacatures": 0,
    "signalen": [
@@ -475,18 +477,9 @@
      "groei": 3
     },
     {
-     "titel": "De Jong & Laan doet met CROP grootste overname tot dusver - Accountant.nl",
-     "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxPUTFPY0NGMWVyQk4tZlZXSTJTVWgxNkpfSko2U1lwcjJ0Smt0YzVfdnlWNXBCOFNnNmliQWFReXUwZmRNckxVOEhWb0h2VkFldGxUcWpjb05uU0UwODQ0ZGM3ejVET3FSSU9uazNZNWpTRHk2aFlmNDA4T0x1SHl0U3dpTVlMZXRUSU5taGlZMHc2SjdHczZkNUIydUdMUQ?oc=5",
-     "datum": "Tue, 12 May 2026 07:00:00 GMT",
-     "bron": "Google News",
-     "a": 0,
-     "b": 0,
-     "groei": 3
-    },
-    {
-     "titel": "De Jong & Laan realiseert met CROP overname nummer negen - MenA.nl",
-     "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNNHBqTUl6SHdsWDl3aWYyX3lDaHZBN3Z1M005ZWNRZ0xUczFLS2J0UlMyR0pNZzNYT1NUd3gzaDV1VG8zQURDLTVfMDJ2VkRCZHA3OWYxdFRLSlFPQWlnTDRuelpxUWdGWU1PYlhxWm5WQUh1RGJ4SFNtVnZSX01Rc2xZOWxNakcyU1EwdW5jQ05xME5uUWVuYjJfcFpBd3F6TVNUNFFzNA?oc=5",
-     "datum": "Wed, 13 May 2026 07:00:00 GMT",
+     "titel": "De Jong & Laan rondt overname CROP af - Accountancy Vanmorgen ·",
+     "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQZGhVSE9OU0pzUkxJdFZ2MjVhTTNMQm9YS3JES2ZKNmdpUkwzcVpYcnUyN0FrOXFlQ09Bam1EZEpwZ2l2ckdrT0wwclJncy1NNDBwVkJOSUhfckJ3aGJIdFFVQ3dzcjVESGgzX2xpQ0FSMjZ4b3NfaDRFdXdNcU4tS3NGTlhqODBnMm9J?oc=5",
+     "datum": "Wed, 02 Sep 2026 07:00:00 GMT",
      "bron": "Google News",
      "a": 0,
      "b": 0,
@@ -496,15 +489,6 @@
      "titel": "De Jong & Laan kondigt overname aan van branchegenoot CROP - Consultancy.nl",
      "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNUG1KVERCcjgxa2dlRzJJNnFEYnlXaTh5RkZTSlFWRUphLW1qNEI5MElOTG9Rb251eHVCdzR1aVY0ZFZzTGtPM1VmRXo5d202cC1rd0NDbVZpRnExT084Q3JaRFBWNmhfdk9tR0VBSWE0bko5ZWh4ek5DYlhwV3otVWFUcS1wcGk3ay11TTRCR1RpLURjNnRQTkxxbEvSAaIBQVVfeXFMUGs4UkdYeU1GZnRHcW0zYXRQOHlEQ3BuZXU4QmlIUXY3a2tnQVZGNWRacGpNaW9aTUVYRjh2RENrYXQ3dHJRb0x2dmFqYjFDQVprczdxMWkzSWZIYS1HR1UxY01SMTJPMU5NOVhHQ3lCQVhwWWFUZjczeHNmX0pDQnFDeTRKdzJXenREYzhCTmN5WTY3N1RVVWpBU2dJRWlyakpR?oc=5",
      "datum": "Wed, 13 May 2026 07:00:00 GMT",
-     "bron": "Google News",
-     "a": 0,
-     "b": 0,
-     "groei": 3
-    },
-    {
-     "titel": "De Jong & Laan rondt overname CROP af - Accountancy Vanmorgen ·",
-     "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQZGhVSE9OU0pzUkxJdFZ2MjVhTTNMQm9YS3JES2ZKNmdpUkwzcVpYcnUyN0FrOXFlQ09Bam1EZEpwZ2l2ckdrT0wwclJncy1NNDBwVkJOSUhfckJ3aGJIdFFVQ3dzcjVESGgzX2xpQ0FSMjZ4b3NfaDRFdXdNcU4tS3NGTlhqODBnMm9J?oc=5",
-     "datum": "Wed, 02 Sep 2026 07:00:00 GMT",
      "bron": "Google News",
      "a": 0,
      "b": 0,
@@ -968,20 +952,10 @@
    "omzet": null,
    "internationaal": true,
    "eigenaar": "",
-   "score_out": 54,
+   "score_out": 30,
    "score_nl": 38,
    "vacatures": 0,
-   "signalen": [
-    {
-     "titel": "Fusies en overnames in de accountancy: Gebrek aan opvolging grote aanjager - Accountantweek",
-     "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNM08tcU1OTWNQQkx0N2VEcUtDTTZxZVFxNV95WFNGeTZRY1VXLXllbmt0QmF0cjZmd0YwQzE2MWRDUXdQWFR6XzBFVnF3MmxIUE4xLVVtMEZrb0F2ejRtcU9lZE1ab0lWNUlqTDRwenhscmZVcVNybmpGSVpFSENkR3Y3M3E1bks0WTBsZWNab2pRMTRKYkt1TmZzM3ktSVcwSHRwbF9INHRhTDdB?oc=5",
-     "datum": "Wed, 25 Apr 2018 07:00:00 GMT",
-     "bron": "Google News",
-     "a": 0,
-     "b": 0,
-     "groei": 6
-    }
-   ]
+   "signalen": []
   },
   {
    "name": "Auren Audit & Assurance Amsterdam B.V.",
@@ -993,20 +967,10 @@
    "omzet": null,
    "internationaal": true,
    "eigenaar": "",
-   "score_out": 54,
+   "score_out": 30,
    "score_nl": 38,
    "vacatures": 0,
-   "signalen": [
-    {
-     "titel": "Fusies en overnames in de accountancy: Gebrek aan opvolging grote aanjager - Accountantweek",
-     "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNM08tcU1OTWNQQkx0N2VEcUtDTTZxZVFxNV95WFNGeTZRY1VXLXllbmt0QmF0cjZmd0YwQzE2MWRDUXdQWFR6XzBFVnF3MmxIUE4xLVVtMEZrb0F2ejRtcU9lZE1ab0lWNUlqTDRwenhscmZVcVNybmpGSVpFSENkR3Y3M3E1bks0WTBsZWNab2pRMTRKYkt1TmZzM3ktSVcwSHRwbF9INHRhTDdB?oc=5",
-     "datum": "Wed, 25 Apr 2018 07:00:00 GMT",
-     "bron": "Google News",
-     "a": 0,
-     "b": 0,
-     "groei": 6
-    }
-   ]
+   "signalen": []
   },
   {
    "name": "HLB Den Hartog Accountants & Consultants",
@@ -1296,10 +1260,20 @@
    "omzet": null,
    "internationaal": false,
    "eigenaar": "",
-   "score_out": 30,
+   "score_out": 38,
    "score_nl": 30,
    "vacatures": 0,
-   "signalen": []
+   "signalen": [
+    {
+     "titel": "AV-Top 50 | Assurance Top 30: beperkte groei in een markt die nauwelijks groter wordt - Accountancy Vanmorgen ·",
+     "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPZ1hGZU5EQnZvR003VURfZlQ3VFVRWmpFMXJybmJfeXpXUVI2Q0FmcXFVVHpORG9QZVpkSHg2TjZYV1Qtck1WV0RNNzhJYjFXUGY0ZW5GQzFMZzJ3RHlYQVBxNzBlS3MxdEJ6dHhFc3d2aFZXV2V4bFdZc2twZDh3Q1R1QXJqUmlDZmljaGw3MF9SR3ZZNU05MEYtNFIyNnhIcWhLMUJfaW11bk52c0ZTakV5UHBTLUFtWm1OdjhJTTRleWRzeVhpUGFB?oc=5",
+     "datum": "Thu, 26 Nov 2026 10:17:06 GMT",
+     "bron": "Google News",
+     "a": 0,
+     "b": 0,
+     "groei": 2
+    }
+   ]
   },
   {
    "name": "Audit 4you B.V.",
@@ -1506,7 +1480,7 @@
    "vacatures": 0,
    "signalen": [
     {
-     "titel": "Overnamemarkt voor accountancy naar historisch niveau - mena.nl",
+     "titel": "Overnamemarkt voor accountancy naar historisch niveau - MenA.nl",
      "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNSmp4akxIRDlvQ01EN0lNYWZnRkNzT21ZeFVPOE1aOUdEVmVwZmt2OHZuNVk0a2NWc3NuWUdEdkVzYUNaMl92N2dtdzlUZWl6T0g1elpvVjdDX080QnE5SUI3dzBwQkRXTldmU3l5Q0xERGdLcmdYZUlUXzM3aGl1Z2ZESkM2NElhc3Rj?oc=5",
      "datum": "Fri, 13 Mar 2026 07:00:00 GMT",
      "bron": "Google News",
@@ -2628,20 +2602,10 @@
    "omzet": null,
    "internationaal": false,
    "eigenaar": "",
-   "score_out": 46,
+   "score_out": 30,
    "score_nl": 30,
    "vacatures": 0,
-   "signalen": [
-    {
-     "titel": "Geen keuzemenu, wel plat Drents: zó groeit familiebedrijf Mulderij - AMweb",
-     "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNV0hkYTk5S0ZPWU1MZTU4VXVYSHo2NVRENENGUUdzZDdENm81SGpSWEVRVTRVZlBDOFBiYmdIS0d1SXhCaUpvVXRfWHhXVFNzTmpmQUxmODNTcG9zLW43cUlKdm5kUmhqc0M2VXFyMmdBNUNUUkQ0TG9WcC1aakpVS19sRmVINTQtYWVLUm9Eb1JQLWxiY2NR?oc=5",
-     "datum": "Wed, 29 Jul 2026 07:00:00 GMT",
-     "bron": "Google News",
-     "a": 0,
-     "b": 0,
-     "groei": 4
-    }
-   ]
+   "signalen": []
   },
   {
    "name": "Nagtzaam Accountants & Fiscalisten Veghel B.V.",
@@ -2743,20 +2707,10 @@
    "omzet": null,
    "internationaal": false,
    "eigenaar": "",
-   "score_out": 42,
+   "score_out": 30,
    "score_nl": 30,
    "vacatures": 0,
-   "signalen": [
-    {
-     "titel": "Handelsblatt : Helsing overweegt overname Nederlandse wapenfabrikant Destinus - NRC - Nieuws, achtergronden en onderzoeksjournalistiek",
-     "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNQzBZV1RaQVpUcDBRY2lxaDB1UWVQbElWamJVdDFtd1Nsa3Z4VWRua201dnJ6M3pROUpQOHJLcDBKQVd5WmhjTlFOWk1JNEMyWEU4YjIzOHEzVUQ5RDNIdnl6QVd6am1PNWdRclBLQ0YtRHJkbXEwRjNpakFRRm1JSjJ1VktmYzBJTXM5UVowdDBLRzgyM01IOHNyQWZGdXpxU3ZFbFF6OE51MzdHYjNScENXUGd0bTRFd2c0bzRB?oc=5",
-     "datum": "Wed, 25 Nov 2026 10:50:37 GMT",
-     "bron": "Google News",
-     "a": 0,
-     "b": 0,
-     "groei": 3
-    }
-   ]
+   "signalen": []
   },
   {
    "name": "NOVA Accountants B.V.",
@@ -3128,20 +3082,10 @@
    "omzet": null,
    "internationaal": false,
    "eigenaar": "",
-   "score_out": 38,
+   "score_out": 30,
    "score_nl": 30,
    "vacatures": 0,
-   "signalen": [
-    {
-     "titel": "KPMG investeert in mensen en technologie en zet groei voort - KPMG International",
-     "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNMzNuTks1WFozYnBhT0hjSHl6eUlwMHJVTGRyTy1aRWpHVUw4azNmcTI5ZXJXR2JOdnp2M3FaNnZhbEtyYVRNeUZBOHJZU2xkazdhTHI3YUtrLUtsdDI1MkxVcUVMek45QUE3UWhaMk9BUGN3YTk1NHhkeENSTWppR0RQQUthc2owa0wxeg?oc=5",
-     "datum": "Thu, 18 Dec 2025 08:00:00 GMT",
-     "bron": "Google News",
-     "a": 0,
-     "b": 0,
-     "groei": 2
-    }
-   ]
+   "signalen": []
   },
   {
    "name": "Strik en Van der Weide Accountants B.V.",
@@ -3558,20 +3502,10 @@
    "omzet": null,
    "internationaal": false,
    "eigenaar": "Tom",
-   "score_out": 62,
+   "score_out": 30,
    "score_nl": 30,
    "vacatures": 0,
-   "signalen": [
-    {
-     "titel": "Slanke magnetische powerbank van Baseus verschijnt met 30W-snelladen en een capaciteit van 10.000 mAh - Notebookcheck.nl",
-     "link": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxOUkdPV2wzcEtsZlItdW1PYUZCQnVUVV80OTBxT3VydWwtSTUtNVZOTHFZTl9STk1GTTNya1ZEZDVLRzE3RV91WFFNQ29uX0FSZGN6WjRfeFplVUoyRmMyUU5jSm1GNHRaRWFxMHNPSm5ZcXdMQ1BZMWNvd2JUZDV4T1FSVzJ0TFVYY1BUOERwNEsyRlpXVEY3aDVTRlI2WEk4cFpBTGtGUWg0c0J1VjdVbnhzTll2aTRnU2dwN1RfdTdFVXBhNTBzWUxwWHVBd3huYWhmbUVPck5Pa1dtVGc?oc=5",
-     "datum": "Thu, 26 Nov 2026 09:50:00 GMT",
-     "bron": "Google News",
-     "a": 4,
-     "b": 0,
-     "groei": 0
-    }
-   ]
+   "signalen": []
   },
   {
    "name": "WAG & Partners B.V.",
